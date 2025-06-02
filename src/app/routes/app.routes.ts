@@ -1,9 +1,8 @@
 import { Routes } from "@angular/router";
-import { HomeComponent } from "../features/home/pages/home.component";
-
+import { WipComponent } from "../features/wip/pages/wip.component";
 export const appRoutes: Routes = [
   {
     path: "",
-    component: HomeComponent,
+    component: WipComponent,
   },
 ];
