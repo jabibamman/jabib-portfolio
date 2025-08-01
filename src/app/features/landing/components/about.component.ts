@@ -2,11 +2,12 @@ import { Component } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
 import { LucideAngularModule } from "lucide-angular";
+import { TranslatePipe } from "../../../core/pipes/translate.pipe";
 
 @Component({
   selector: "app-about",
   standalone: true,
-  imports: [CommonModule, RouterModule, LucideAngularModule],
+  imports: [CommonModule, RouterModule, LucideAngularModule, TranslatePipe],
   template: `
     <section class="relative py-24 px-6 bg-zinc-950">
       <div class="max-w-6xl mx-auto">
@@ -31,7 +32,7 @@ import { LucideAngularModule } from "lucide-angular";
             <h2 class="text-4xl md:text-5xl font-bold mb-6">
               <span
                 class="bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
-                À propos de moi
+                {{ 'landing.about.title' | translate | async }}
               </span>
             </h2>
 
@@ -46,13 +47,10 @@ import { LucideAngularModule } from "lucide-angular";
                 </div>
                 <div>
                   <h3 class="text-xl font-semibold text-white mb-2">
-                    Qui suis-je ?
+                    {{ 'landing.about.who.title' | translate | async }}
                   </h3>
                   <p class="text-zinc-400">
-                    Développeur fullstack passionné, je combine expertise
-                    technique et vision moderne pour créer des solutions qui
-                    font la différence. Mon approche allie rigueur et
-                    créativité.
+                    {{ 'landing.about.who.description' | translate | async }}
                   </p>
                 </div>
               </div>
@@ -67,13 +65,10 @@ import { LucideAngularModule } from "lucide-angular";
                 </div>
                 <div>
                   <h3 class="text-xl font-semibold text-white mb-2">
-                    Mon parcours
+                    {{ 'landing.about.journey.title' | translate | async }}
                   </h3>
                   <p class="text-zinc-400">
-                    Actuellement développeur à l'INSEE, j'ai acquis une solide
-                    expérience dans la création et maintenance de systèmes
-                    critiques. En parallèle, je mets mes compétences au service
-                    de projets innovants en tant qu'auto-entrepreneur.
+                    {{ 'landing.about.journey.description' | translate | async }}
                   </p>
                 </div>
               </div>
@@ -88,12 +83,10 @@ import { LucideAngularModule } from "lucide-angular";
                 </div>
                 <div>
                   <h3 class="text-xl font-semibold text-white mb-2">
-                    Ma philosophie
+                    {{ 'landing.about.philosophy.title' | translate | async }}
                   </h3>
                   <p class="text-zinc-400">
-                    Je crois en un code propre, maintenable et performant.
-                    Chaque projet est une opportunité de repousser les limites
-                    et de créer quelque chose d'exceptionnel.
+                    {{ 'landing.about.philosophy.description' | translate | async }}
                   </p>
                 </div>
               </div>
@@ -103,7 +96,7 @@ import { LucideAngularModule } from "lucide-angular";
               <a
                 routerLink="/cv"
                 class="inline-flex items-center gap-2 text-violet-400 hover:text-violet-300 font-semibold transition-colors duration-300">
-                Voir mon CV complet
+                {{ 'common.buttons.view_cv' | translate | async }}
                 <lucide-icon name="arrow-right" [size]="20"></lucide-icon>
               </a>
             </div>
@@ -113,26 +106,26 @@ import { LucideAngularModule } from "lucide-angular";
         <div
           class="mt-16 p-8 bg-gradient-to-r from-zinc-900 to-zinc-950 rounded-2xl border border-zinc-800">
           <h3 class="text-2xl font-bold text-white mb-6 text-center">
-            Technologies maîtrisées
+            {{ 'landing.about.tech.title' | translate | async }}
           </h3>
           <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div class="text-center">
               <div class="text-4xl font-bold text-violet-400 mb-2">Java</div>
-              <p class="text-sm text-zinc-500">Backend robuste</p>
+              <p class="text-sm text-zinc-500">{{ 'landing.about.tech.java' | translate | async }}</p>
             </div>
             <div class="text-center">
               <div class="text-4xl font-bold text-pink-400 mb-2">
                 TypeScript
               </div>
-              <p class="text-sm text-zinc-500">Frontend moderne</p>
+              <p class="text-sm text-zinc-500">{{ 'landing.about.tech.typescript' | translate | async }}</p>
             </div>
             <div class="text-center">
               <div class="text-4xl font-bold text-violet-400 mb-2">Rust</div>
-              <p class="text-sm text-zinc-500">Performance</p>
+              <p class="text-sm text-zinc-500">{{ 'landing.about.tech.rust' | translate | async }}</p>
             </div>
             <div class="text-center">
               <div class="text-4xl font-bold text-pink-400 mb-2">Cloud</div>
-              <p class="text-sm text-zinc-500">Architecture scalable</p>
+              <p class="text-sm text-zinc-500">{{ 'landing.about.tech.cloud' | translate | async }}</p>
             </div>
           </div>
         </div>

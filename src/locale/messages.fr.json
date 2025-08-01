@@ -1,0 +1,220 @@
+{
+  "common": {
+    "buttons": {
+      "book_appointment": "Prendre rendez-vous",
+      "view_cv": "Voir mon CV",
+      "schedule_call": "Planifier un appel gratuit",
+      "start_now": "Commençons maintenant",
+      "send_email": "Envoyer"
+    },
+    "labels": {
+      "available": "Disponible pour vos projets",
+      "yearsExperience": "Années d'expérience",
+      "projectsDelivered": "Projets livrés dans les temps",
+      "satisfactionGuaranteed": "Satisfaction garantie"
+    },
+    "contact": {
+      "email": "james.abibamman@gmail.com",
+      "followOn": "Ou retrouvez-moi sur"
+    }
+  },
+  "landing": {
+    "hero": {
+      "title": {
+        "developer": "Développeur",
+        "fullstack": "Fullstack"
+      },
+      "subtitle": "James ABIB - Architecte logiciel passionné par la création de solutions robustes et innovantes",
+      "techStack": {
+        "java": "Java",
+        "typescript": "TypeScript",
+        "rust": "Rust",
+        "angular": "Angular",
+        "cloud": "Cloud"
+      }
+    },
+    "services": {
+      "badge": "Services premium",
+      "title": "Comment puis-je vous aider ?",
+      "subtitle": "Des solutions sur mesure pour transformer vos idées en réalité",
+      "fullstack": {
+        "title": "Développement Full-Stack",
+        "description": "Applications web modernes et performantes avec les dernières technologies"
+      },
+      "cloud": {
+        "title": "Architecture Cloud",
+        "description": "Solutions scalables et sécurisées pour vos infrastructures modernes"
+      },
+      "consulting": {
+        "title": "Consulting & Formation",
+        "description": "Accompagnement personnalisé pour améliorer vos pratiques"
+      },
+      "cta": "Un projet en tête ? Discutons-en !"
+    },
+    "process": {
+      "title": "Un processus qui fonctionne",
+      "subtitle": "De l'idée à la réalisation, je vous accompagne à chaque étape",
+      "step1": {
+        "title": "Discussion initiale",
+        "description": "On échange sur vos besoins, vos objectifs et vos contraintes pour bien comprendre votre projet"
+      },
+      "step2": {
+        "title": "Proposition technique",
+        "description": "Je vous propose une solution adaptée avec un devis détaillé et un planning de réalisation"
+      },
+      "step3": {
+        "title": "Développement itératif",
+        "description": "Sprints courts avec des livrables réguliers et des points de feedback pour ajuster si besoin"
+      },
+      "step4": {
+        "title": "Livraison & Support",
+        "description": "Déploiement en production, formation si nécessaire et support pour garantir le succès"
+      },
+      "stats": {
+        "ontime": "Projets livrés dans les temps",
+        "experience": "Années d'expérience",
+        "satisfaction": "Satisfaction garantie"
+      }
+    },
+    "about": {
+      "title": "À propos de moi",
+      "who": {
+        "title": "Qui suis-je ?",
+        "description": "Développeur fullstack passionné, je combine expertise technique et vision moderne pour créer des solutions qui font la différence. Mon approche allie rigueur et créativité."
+      },
+      "journey": {
+        "title": "Mon parcours",
+        "description": "Actuellement développeur à l'INSEE, j'ai acquis une solide expérience dans la création et maintenance de systèmes critiques. En parallèle, je mets mes compétences au service de projets innovants en tant qu'auto-entrepreneur."
+      },
+      "philosophy": {
+        "title": "Ma philosophie",
+        "description": "Je crois en un code propre, maintenable et performant. Chaque projet est une opportunité de repousser les limites et de créer quelque chose d'exceptionnel."
+      },
+      "tech": {
+        "title": "Technologies maîtrisées",
+        "java": "Backend robuste",
+        "typescript": "Frontend moderne",
+        "rust": "Performance",
+        "cloud": "Architecture scalable"
+      }
+    },
+    "contact": {
+      "title": "Prêt à démarrer votre projet ?",
+      "subtitle": "Discutons de vos idées et transformons-les en réalité",
+      "call": {
+        "title": "Planifier un appel",
+        "description": "30 minutes pour discuter de votre projet et voir comment je peux vous aider"
+      },
+      "email": {
+        "title": "Envoyer un email",
+        "description": "Pour une demande détaillée ou des questions spécifiques"
+      },
+      "social": "Ou retrouvez-moi sur",
+      "cta": {
+        "title": "Ne laissez pas vos idées rester des idées",
+        "subtitle": "Ensemble, construisons quelque chose d'exceptionnel",
+        "button": "Commençons maintenant"
+      }
+    }
+  },
+  "cv": {
+    "header": {
+      "name": "James ABIB",
+      "title": "Développeur Fullstack | Java & TypeScript & Rust",
+      "description": "Ingénieur logiciel axé sur l'architecture, passionné par le code propre et les systèmes robustes.",
+      "experience": "{{years}}+ ans d'expérience à l'INSEE dans la construction et la maintenance de systèmes critiques, et livraison de bout en bout d'un projet client réel (Upstra) utilisant microservices/cloud.",
+      "vision": "J'apporte une vision moderne (Rust, cloud, CI/CD), un fort esprit d'équipe et la capacité de livrer des produits de haute qualité, rapidement."
+    },
+    "sections": {
+      "experience": "Expérience Professionnelle",
+      "education": "Formation",
+      "skills": "Compétences",
+      "projects": "Projets",
+      "languages": "Langues",
+      "interests": "Centres d'intérêt"
+    },
+    "experience": {
+      "upstra": {
+        "role": "Développeur Fullstack",
+        "company": "Eurialys – Projet Upstra",
+        "period": "Mars 2025 – Présent · Freelance (client réel, validation MSc)",
+        "description": "Conception et développement de la plateforme Upstra (gestion d'infra pour laboratoires):<br>Architecture microservices (NestJS DDD/hexagonal), Python (UPS/iLO), front Vue 3.<br>Docker Compose, API modulaire, docs & démo client."
+      },
+      "insee": {
+        "role": "Développeur Fullstack (alternance)",
+        "company": "INSEE",
+        "period": "Sep 2022 – Présent",
+        "description": "Conception, développement & maintenance d'APIs critiques (Spring Boot 3, Java 21) + front React.<br>Modernisation des pipelines de données (Talend → Spring Batch 5.1).<br>Travail d'équipe sur des solutions publiques à fort impact."
+      }
+    },
+    "education": {
+      "msc": {
+        "degree": "Expert en Ingénierie du Développement et en Architecture Logicielle",
+        "school": "ESGI Paris - Option Architecture des Logiciels",
+        "period": "2023-2025",
+        "description": "Mastère (Niveau Bac +5) - Spécialisation en architecture logicielle"
+      },
+      "bsc": {
+        "degree": "Chef de Projet Logiciel et Réseau",
+        "school": "ESGI Paris - Option Architecture des Logiciels",
+        "period": "2022-2023",
+        "description": "Bachelor (Niveau Bac +3) - Architecture logicielle"
+      },
+      "bts": {
+        "degree": "BTS Services Informatiques aux Organisations SLAM",
+        "school": "Diplômé en 2022",
+        "period": "2020-2022",
+        "description": "Résultat : 15.34/20"
+      }
+    },
+    "skills": {
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "devops": "DevOps & Outils",
+      "database": "Base de données"
+    },
+    "projects": {
+      "codeValley": {
+        "name": "Code Valley",
+        "description": "Réseau social pour développeurs (type GitHub) avec partage et exécution de code. Architecture microservices avec authentification sécurisée, gestion de contenu, exécution de code isolée et interfaces web/mobile.",
+        "link": "https://github.com/CodeValleyy"
+      },
+      "frakt": {
+        "name": "Générateur de Fractale (frakt)",
+        "description": "Générateur de fractales performant utilisant des formules mathématiques complexes (Julia, Mandelbrot, Newton-Raphson). Intégration continue et documentation complète.",
+        "link": "github.com/jabibamman/frakt"
+      },
+      "greenItForward": {
+        "name": "GreenItForward",
+        "description": "Plateforme de crowdfunding dédiée aux associations environnementales. Permet le financement participatif de projets écologiques avec suivi des contributions et des impacts.",
+        "link": "github.com/greenitforward"
+      }
+    },
+    "languages": {
+      "french": "Français (natif)",
+      "english": "Anglais (courant)",
+      "spanish": "Espagnol (intermédiaire)"
+    },
+    "interests": {
+      "tech": "Technologies émergentes & Open Source",
+      "writing": "Rédaction d'articles techniques",
+      "mentoring": "Mentorat de développeurs juniors"
+    }
+  },
+  "wip": {
+    "title": "Work in Progress",
+    "description": "Désolé, cette section est encore en construction.",
+    "features": "Nouvelles fonctionnalités",
+    "and": "et",
+    "tools": "outils cool",
+    "comingSoon": "arrivent bientôt !",
+    "returnHome": "← Retour à l'accueil",
+    "messages": {
+      "building": "Construction du futur... Veuillez patienter.",
+      "hello": "Bonjour ami.",
+      "deploying": "Déploiement de la créativité.",
+      "injecting": "Injection de TypeScript...",
+      "crafting": "Création de l'espace de travail fullstack."
+    }
+  }
+}

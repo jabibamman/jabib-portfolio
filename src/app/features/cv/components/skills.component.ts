@@ -1,16 +1,17 @@
 import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
+import { TranslatePipe } from "../../../core/pipes/translate.pipe";
 
 @Component({
   selector: "app-skills",
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   template: `
     <div class="px-12 pb-7">
       <div
         class="text-violet-400 uppercase font-bold text-sm mb-4 border-l-4 border-yellow-300 pl-3"
       >
-        Key Skills
+        {{ 'cv.sections.skills' | translate | async }}
       </div>
       <div class="flex flex-wrap items-center gap-x-8 gap-y-4">
         <ng-container *ngFor="let skill of skills">

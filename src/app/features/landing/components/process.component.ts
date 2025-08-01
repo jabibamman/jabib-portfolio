@@ -1,11 +1,12 @@
 import { Component } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { LucideAngularModule } from "lucide-angular";
+import { TranslatePipe } from "../../../core/pipes/translate.pipe";
 
 @Component({
   selector: "app-process",
   standalone: true,
-  imports: [CommonModule, LucideAngularModule],
+  imports: [CommonModule, LucideAngularModule, TranslatePipe],
   template: `
     <section
       class="relative py-24 px-6 bg-gradient-to-b from-zinc-950 to-zinc-900">
@@ -14,11 +15,11 @@ import { LucideAngularModule } from "lucide-angular";
           <h2 class="text-4xl md:text-5xl font-bold mb-4">
             <span
               class="bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
-              Un processus qui fonctionne
+              {{ 'landing.process.title' | translate | async }}
             </span>
           </h2>
           <p class="text-xl text-zinc-400 max-w-2xl mx-auto">
-            De l'idée à la réalisation, je vous accompagne à chaque étape
+            {{ 'landing.process.subtitle' | translate | async }}
           </p>
         </div>
 
@@ -30,11 +31,10 @@ import { LucideAngularModule } from "lucide-angular";
             <div class="relative flex items-center">
               <div class="flex-1 text-right pr-8 md:pr-16">
                 <h3 class="text-2xl font-bold text-white mb-2">
-                  Discussion initiale
+                  {{ 'landing.process.step1.title' | translate | async }}
                 </h3>
                 <p class="text-zinc-400">
-                  On échange sur vos besoins, vos objectifs et vos contraintes
-                  pour bien comprendre votre projet
+                  {{ 'landing.process.step1.description' | translate | async }}
                 </p>
               </div>
               <div
@@ -62,11 +62,10 @@ import { LucideAngularModule } from "lucide-angular";
               </div>
               <div class="flex-1 pl-8 md:pl-16">
                 <h3 class="text-2xl font-bold text-white mb-2">
-                  Proposition technique
+                  {{ 'landing.process.step2.title' | translate | async }}
                 </h3>
                 <p class="text-zinc-400">
-                  Je vous propose une solution adaptée avec un devis détaillé et
-                  un planning de réalisation
+                  {{ 'landing.process.step2.description' | translate | async }}
                 </p>
               </div>
             </div>
@@ -74,11 +73,10 @@ import { LucideAngularModule } from "lucide-angular";
             <div class="relative flex items-center">
               <div class="flex-1 text-right pr-8 md:pr-16">
                 <h3 class="text-2xl font-bold text-white mb-2">
-                  Développement itératif
+                  {{ 'landing.process.step3.title' | translate | async }}
                 </h3>
                 <p class="text-zinc-400">
-                  Sprints courts avec des livrables réguliers et des points de
-                  feedback pour ajuster si besoin
+                  {{ 'landing.process.step3.description' | translate | async }}
                 </p>
               </div>
               <div
@@ -106,11 +104,10 @@ import { LucideAngularModule } from "lucide-angular";
               </div>
               <div class="flex-1 pl-8 md:pl-16">
                 <h3 class="text-2xl font-bold text-white mb-2">
-                  Livraison & Support
+                  {{ 'landing.process.step4.title' | translate | async }}
                 </h3>
                 <p class="text-zinc-400">
-                  Déploiement en production, formation si nécessaire et support
-                  pour garantir le succès
+                  {{ 'landing.process.step4.description' | translate | async }}
                 </p>
               </div>
             </div>
@@ -123,13 +120,13 @@ import { LucideAngularModule } from "lucide-angular";
               class="text-5xl font-bold bg-gradient-to-r from-violet-400 to-pink-400 bg-clip-text text-transparent mb-2">
               100%
             </div>
-            <p class="text-zinc-400">Projets livrés dans les temps</p>
+            <p class="text-zinc-400">{{ 'landing.process.stats.ontime' | translate | async }}</p>
           </div>
           <div class="text-center">
             <div class="text-5xl font-bold text-violet-400 mb-2">
               {{ yearsOfExperience }}+
             </div>
-            <p class="text-zinc-400">Années d'expérience</p>
+            <p class="text-zinc-400">{{ 'landing.process.stats.experience' | translate | async }}</p>
           </div>
           <div class="text-center">
             <div
@@ -139,7 +136,7 @@ import { LucideAngularModule } from "lucide-angular";
                 [size]="48"
                 class="inline"></lucide-icon>
             </div>
-            <p class="text-zinc-400">Satisfaction garantie</p>
+            <p class="text-zinc-400">{{ 'landing.process.stats.satisfaction' | translate | async }}</p>
           </div>
         </div>
       </div>

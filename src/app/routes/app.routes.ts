@@ -11,4 +11,12 @@ export const appRoutes: Routes = [
     path: "cv",
     component: CvComponent,
   },
+  {
+    path: "wip",
+    component: WipComponent,
+  },
+  {
+    path: "**",
+    component: WipComponent,
+  },
 ];

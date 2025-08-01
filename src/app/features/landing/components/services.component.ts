@@ -1,11 +1,12 @@
 import { Component } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { LucideAngularModule } from "lucide-angular";
+import { TranslatePipe } from "../../../core/pipes/translate.pipe";
 
 @Component({
   selector: "app-services",
   standalone: true,
-  imports: [CommonModule, LucideAngularModule],
+  imports: [CommonModule, LucideAngularModule, TranslatePipe],
   template: `
     <section class="relative py-24 px-6 bg-zinc-950">
       <div class="max-w-6xl mx-auto">
@@ -13,16 +14,16 @@ import { LucideAngularModule } from "lucide-angular";
           <div
             class="inline-flex items-center gap-2 px-4 py-2 bg-violet-950/50 backdrop-blur-sm border border-violet-800/50 rounded-full text-sm text-violet-300 mb-4">
             <lucide-icon name="sparkles" [size]="16"></lucide-icon>
-            <span>Services premium</span>
+            <span>{{ 'landing.services.badge' | translate | async }}</span>
           </div>
           <h2 class="text-4xl md:text-5xl font-bold mb-4">
             <span
               class="bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
-              Comment puis-je vous aider ?
+              {{ 'landing.services.title' | translate | async }}
             </span>
           </h2>
           <p class="text-xl text-zinc-400 max-w-2xl mx-auto">
-            Des solutions sur mesure pour transformer vos idées en réalité
+            {{ 'landing.services.subtitle' | translate | async }}
           </p>
         </div>
 
@@ -42,12 +43,11 @@ import { LucideAngularModule } from "lucide-angular";
               </div>
 
               <h3 class="text-2xl font-bold text-white mb-3">
-                Développement Full-Stack
+                {{ 'landing.services.fullstack.title' | translate | async }}
               </h3>
 
               <p class="text-zinc-400 mb-6">
-                Applications web modernes et performantes avec les dernières
-                technologies
+                {{ 'landing.services.fullstack.description' | translate | async }}
               </p>
 
               <ul class="space-y-2 text-sm text-zinc-500">
@@ -91,12 +91,11 @@ import { LucideAngularModule } from "lucide-angular";
               </div>
 
               <h3 class="text-2xl font-bold text-white mb-3">
-                Architecture Cloud
+                {{ 'landing.services.cloud.title' | translate | async }}
               </h3>
 
               <p class="text-zinc-400 mb-6">
-                Solutions scalables et sécurisées pour vos infrastructures
-                modernes
+                {{ 'landing.services.cloud.description' | translate | async }}
               </p>
 
               <ul class="space-y-2 text-sm text-zinc-500">
@@ -140,11 +139,11 @@ import { LucideAngularModule } from "lucide-angular";
               </div>
 
               <h3 class="text-2xl font-bold text-white mb-3">
-                Consulting & Formation
+                {{ 'landing.services.consulting.title' | translate | async }}
               </h3>
 
               <p class="text-zinc-400 mb-6">
-                Accompagnement personnalisé pour améliorer vos pratiques
+                {{ 'landing.services.consulting.description' | translate | async }}
               </p>
 
               <ul class="space-y-2 text-sm text-zinc-500">
@@ -175,11 +174,11 @@ import { LucideAngularModule } from "lucide-angular";
         </div>
 
         <div class="text-center mt-16">
-          <p class="text-zinc-400 mb-6">Un projet en tête ? Discutons-en !</p>
+          <p class="text-zinc-400 mb-6">{{ 'landing.services.cta' | translate | async }}</p>
           <button
             (click)="openCalendly()"
             class="group relative px-8 py-4 bg-gradient-to-r from-violet-600 to-pink-600 rounded-xl font-semibold text-white shadow-2xl shadow-violet-500/25 hover:shadow-violet-500/40 transition-all duration-300 hover:scale-105">
-            <span class="relative z-10">Planifier un appel gratuit</span>
+            <span class="relative z-10">{{ 'common.buttons.schedule_call' | translate | async }}</span>
             <div
               class="absolute inset-0 rounded-xl bg-gradient-to-r from-violet-400 to-pink-400 opacity-0 group-hover:opacity-100 blur transition-opacity duration-300"></div>
           </button>

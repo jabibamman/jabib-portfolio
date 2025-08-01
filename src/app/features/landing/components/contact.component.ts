@@ -1,11 +1,12 @@
 import { Component } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { LucideAngularModule } from "lucide-angular";
+import { TranslatePipe } from "../../../core/pipes/translate.pipe";
 
 @Component({
   selector: "app-contact",
   standalone: true,
-  imports: [CommonModule, LucideAngularModule],
+  imports: [CommonModule, LucideAngularModule, TranslatePipe],
   template: `
     <section
       class="relative py-24 px-6 bg-gradient-to-b from-zinc-900 to-zinc-950">
@@ -14,11 +15,11 @@ import { LucideAngularModule } from "lucide-angular";
           <h2 class="text-4xl md:text-5xl font-bold mb-4">
             <span
               class="bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
-              Prêt à démarrer votre projet ?
+              {{ "landing.contact.title" | translate | async }}
             </span>
           </h2>
           <p class="text-xl text-zinc-400">
-            Discutons de vos idées et transformons-les en réalité
+            {{ "landing.contact.subtitle" | translate | async }}
           </p>
         </div>
 
@@ -37,16 +38,15 @@ import { LucideAngularModule } from "lucide-angular";
                   class="text-white"></lucide-icon>
               </div>
               <h3 class="text-xl font-bold text-white mb-2">
-                Planifier un appel
+                {{ "landing.contact.call.title" | translate | async }}
               </h3>
               <p class="text-zinc-400 mb-4">
-                30 minutes pour discuter de votre projet et voir comment je peux
-                vous aider
+                {{ "landing.contact.call.description" | translate | async }}
               </p>
               <button
                 (click)="openCalendly()"
                 class="inline-flex items-center gap-2 text-violet-400 hover:text-violet-300 font-semibold transition-colors duration-300">
-                Prendre rendez-vous
+                {{ "common.buttons.book_appointment" | translate | async }}
                 <lucide-icon name="send" [size]="16"></lucide-icon>
               </button>
             </div>
@@ -66,13 +66,13 @@ import { LucideAngularModule } from "lucide-angular";
                   class="text-white"></lucide-icon>
               </div>
               <h3 class="text-xl font-bold text-white mb-2">
-                Envoyer un email
+                {{ "landing.contact.email.title" | translate | async }}
               </h3>
               <p class="text-zinc-400 mb-4">
-                Pour une demande détaillée ou des questions spécifiques
+                {{ "landing.contact.email.description" | translate | async }}
               </p>
               <a
-                href="mailto:contact@jabib.dev"
+                href="mailto:james.abibamman@gmail.com"
                 class="inline-flex items-center gap-2 text-violet-400 hover:text-violet-300 font-semibold transition-colors duration-300">
                 contact&#64;jabib.dev
                 <lucide-icon name="send" [size]="16"></lucide-icon>
@@ -82,7 +82,9 @@ import { LucideAngularModule } from "lucide-angular";
         </div>
 
         <div class="text-center">
-          <p class="text-zinc-400 mb-6">Ou retrouvez-moi sur</p>
+          <p class="text-zinc-400 mb-6">
+            {{ "landing.contact.social" | translate | async }}
+          </p>
           <div class="flex justify-center gap-4">
             <a
               href="https://github.com/jabibamman"
@@ -110,15 +112,17 @@ import { LucideAngularModule } from "lucide-angular";
         <div
           class="mt-16 p-8 bg-gradient-to-r from-violet-950/50 to-pink-950/50 rounded-2xl border border-violet-800/50 text-center">
           <h3 class="text-2xl font-bold text-white mb-4">
-            Ne laissez pas vos idées rester des idées
+            {{ "landing.contact.cta.title" | translate | async }}
           </h3>
           <p class="text-zinc-400 mb-6">
-            Ensemble, construisons quelque chose d'exceptionnel
+            {{ "landing.contact.cta.subtitle" | translate | async }}
           </p>
           <button
             (click)="openCalendly()"
             class="group relative px-8 py-4 bg-gradient-to-r from-violet-600 to-pink-600 rounded-xl font-semibold text-white shadow-2xl shadow-violet-500/25 hover:shadow-violet-500/40 transition-all duration-300 hover:scale-105">
-            <span class="relative z-10">Commençons maintenant</span>
+            <span class="relative z-10">{{
+              "landing.contact.cta.button" | translate | async
+            }}</span>
             <div
               class="absolute inset-0 rounded-xl bg-gradient-to-r from-violet-400 to-pink-400 opacity-0 group-hover:opacity-100 blur transition-opacity duration-300"></div>
           </button>

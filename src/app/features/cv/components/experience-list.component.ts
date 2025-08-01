@@ -1,34 +1,32 @@
 import { Component } from "@angular/core";
+import { CommonModule } from "@angular/common";
 import { ExperienceCardComponent } from "./experience-card.component";
+import { TranslatePipe } from "../../../core/pipes/translate.pipe";
 
 @Component({
   selector: "app-experience-list",
   standalone: true,
-  imports: [ExperienceCardComponent],
+  imports: [CommonModule, ExperienceCardComponent, TranslatePipe],
   template: `
     <div class="px-12 py-6">
       <div
         class="text-violet-400 uppercase font-bold text-sm mb-4 border-l-4 border-yellow-300 pl-3"
       >
-        Professional Experience
+        {{ 'cv.sections.experience' | translate | async }}
       </div>
       <div class="flex flex-col gap-6">
         <app-experience-card
-          role="Fullstack Developer"
-          company="Eurialys – Upstra Project"
-          period="Mar 2025 – Present · Freelance (real client, MSc validation)"
-          [description]="
-            'Designed and developed the Upstra platform (infra management for labs):<br>Microservices archi (NestJS DDD/hexagonal), Python (UPS/iLO), Vue 3 front.<br>Docker Compose, modular API, docs & client demo.'
-          "
+          role="{{ 'cv.experience.upstra.role' | translate | async }}"
+          company="{{ 'cv.experience.upstra.company' | translate | async }}"
+          period="{{ 'cv.experience.upstra.period' | translate | async }}"
+          description="{{ 'cv.experience.upstra.description' | translate | async }}"
           [tags]="['NestJS', 'Python', 'Vue 3', 'Docker', 'DDD']"
         ></app-experience-card>
         <app-experience-card
-          role="Fullstack Developer (apprenticeship)"
-          company="INSEE"
-          period="Sep 2022 – Present"
-          [description]="
-            'Designed, developed & maintained critical APIs (Spring Boot 3, Java 21) + React front.<br>Modernized data pipelines (Talend → Spring Batch 5.1).<br>Teamwork on high-impact public solutions.'
-          "
+          role="{{ 'cv.experience.insee.role' | translate | async }}"
+          company="{{ 'cv.experience.insee.company' | translate | async }}"
+          period="{{ 'cv.experience.insee.period' | translate | async }}"
+          description="{{ 'cv.experience.insee.description' | translate | async }}"
           [tags]="['Java', 'Spring Boot', 'React', 'Spring Batch', 'GCP']"
         ></app-experience-card>
       </div>

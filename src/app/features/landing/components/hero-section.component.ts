@@ -2,50 +2,57 @@ import { Component } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
 import { LucideAngularModule } from "lucide-angular";
+import { TranslatePipe } from "../../../core/pipes/translate.pipe";
+import { LanguageSwitcherComponent } from "../../../core/components/language-switcher.component";
 
 @Component({
   selector: "app-hero-section",
   standalone: true,
-  imports: [CommonModule, RouterModule, LucideAngularModule],
+  imports: [CommonModule, RouterModule, LucideAngularModule, TranslatePipe, LanguageSwitcherComponent],
   template: `
-    <section
-      class="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div
-        class="absolute inset-0 bg-gradient-to-br from-violet-950 via-zinc-950 to-pink-950">
-        <div class="absolute inset-0 opacity-20">
-          <div
-            class="absolute inset-0"
-            style="background-image: radial-gradient(circle at 1px 1px, rgb(148 163 184 / 0.1) 1px, transparent 1px); background-size: 40px 40px;"></div>
-        </div>
-
-        <div
-          class="absolute top-1/4 left-1/4 w-96 h-96 bg-violet-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
-        <div
-          class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float-delayed"></div>
+    <div class="relative">
+      <!-- Language Switcher fixed at top right -->
+      <div class="fixed top-8 right-8 z-50">
+        <app-language-switcher />
       </div>
-
-      <div class="relative z-10 max-w-6xl mx-auto px-6 py-24 text-center">
+      
+      <section
+        class="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div
-          class="inline-flex items-center gap-2 px-4 py-2 bg-violet-950/50 backdrop-blur-sm border border-violet-800/50 rounded-full text-sm text-violet-300 mb-8">
-          <lucide-icon name="sparkles" [size]="16"></lucide-icon>
-          <span>Disponible pour vos projets</span>
+          class="absolute inset-0 bg-gradient-to-br from-violet-950 via-zinc-950 to-pink-950">
+          <div class="absolute inset-0 opacity-20">
+            <div
+              class="absolute inset-0"
+              style="background-image: radial-gradient(circle at 1px 1px, rgb(148 163 184 / 0.1) 1px, transparent 1px); background-size: 40px 40px;"></div>
+          </div>
+
+          <div
+            class="absolute top-1/4 left-1/4 w-96 h-96 bg-violet-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
+          <div
+            class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float-delayed"></div>
         </div>
+
+        <div class="relative z-10 max-w-6xl mx-auto px-6 py-24 text-center">
+          <div
+            class="inline-flex items-center gap-2 px-4 py-2 bg-violet-950/50 backdrop-blur-sm border border-violet-800/50 rounded-full text-sm text-violet-300 mb-8">
+            <lucide-icon name="sparkles" [size]="16"></lucide-icon>
+            <span>{{ 'common.labels.available' | translate | async }}</span>
+          </div>
 
         <h1 class="text-6xl md:text-7xl lg:text-8xl font-bold mb-6">
           <span
             class="bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
-            Développeur
+            {{ 'landing.hero.title.developer' | translate | async }}
           </span>
           <br />
           <span
             class="bg-gradient-to-r from-violet-400 to-pink-400 bg-clip-text text-transparent">
-            Fullstack
+            {{ 'landing.hero.title.fullstack' | translate | async }}
           </span>
         </h1>
 
         <p class="text-xl md:text-2xl text-zinc-300 mb-4 max-w-2xl mx-auto">
-          James ABIB - Architecte logiciel passionné par la création de
-          solutions robustes et innovantes
+          {{ 'landing.hero.subtitle' | translate | async }}
         </p>
 
         <div class="flex flex-wrap gap-3 justify-center mb-12">
@@ -77,7 +84,7 @@ import { LucideAngularModule } from "lucide-angular";
             class="group relative px-8 py-4 bg-gradient-to-r from-violet-600 to-pink-600 rounded-xl font-semibold text-white shadow-2xl shadow-violet-500/25 hover:shadow-violet-500/40 transition-all duration-300 hover:scale-105">
             <span class="flex items-center gap-3">
               <lucide-icon name="calendar" [size]="20"></lucide-icon>
-              Prendre rendez-vous
+              {{ 'common.buttons.book_appointment' | translate | async }}
             </span>
             <div
               class="absolute inset-0 rounded-xl bg-gradient-to-r from-violet-400 to-pink-400 opacity-0 group-hover:opacity-100 blur transition-opacity duration-300"></div>
@@ -88,7 +95,7 @@ import { LucideAngularModule } from "lucide-angular";
             class="group px-8 py-4 bg-zinc-900/80 backdrop-blur-sm border border-zinc-800 rounded-xl font-semibold text-zinc-300 hover:text-white hover:border-zinc-700 transition-all duration-300 hover:scale-105">
             <span class="flex items-center gap-3">
               <lucide-icon name="code-2" [size]="20"></lucide-icon>
-              Voir mon CV
+              {{ 'common.buttons.view_cv' | translate | async }}
             </span>
           </a>
         </div>
@@ -111,6 +118,7 @@ import { LucideAngularModule } from "lucide-angular";
         <lucide-icon name="rocket" [size]="48"></lucide-icon>
       </div>
     </section>
+    </div>
   `,
   styles: [
     `

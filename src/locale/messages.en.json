@@ -1,0 +1,220 @@
+{
+  "common": {
+    "buttons": {
+      "book_appointment": "Book an appointment",
+      "view_cv": "View my CV",
+      "schedule_call": "Schedule a free call",
+      "start_now": "Start now",
+      "send_email": "Send"
+    },
+    "labels": {
+      "available": "Available for your projects",
+      "yearsExperience": "Years of experience",
+      "projectsDelivered": "Projects delivered on time",
+      "satisfactionGuaranteed": "Satisfaction guaranteed"
+    },
+    "contact": {
+      "email": "james.abibamman@gmail.com",
+      "followOn": "Or find me on"
+    }
+  },
+  "landing": {
+    "hero": {
+      "title": {
+        "developer": "Developer",
+        "fullstack": "Fullstack"
+      },
+      "subtitle": "James ABIB – Software architect passionate about building robust and innovative solutions",
+      "techStack": {
+        "java": "Java",
+        "typescript": "TypeScript",
+        "rust": "Rust",
+        "angular": "Angular",
+        "cloud": "Cloud"
+      }
+    },
+    "services": {
+      "badge": "Premium services",
+      "title": "How can I help you?",
+      "subtitle": "Tailored solutions to turn your ideas into reality",
+      "fullstack": {
+        "title": "Full-Stack Development",
+        "description": "Modern, high-performance web applications using the latest technologies"
+      },
+      "cloud": {
+        "title": "Cloud Architecture",
+        "description": "Scalable and secure solutions for your modern infrastructures"
+      },
+      "consulting": {
+        "title": "Consulting & Training",
+        "description": "Personalized support to improve your practices"
+      },
+      "cta": "Got a project in mind? Let’s talk!"
+    },
+    "process": {
+      "title": "A process that works",
+      "subtitle": "From idea to delivery, I support you every step of the way",
+      "step1": {
+        "title": "Initial discussion",
+        "description": "We discuss your needs, goals, and constraints to fully understand your project"
+      },
+      "step2": {
+        "title": "Technical proposal",
+        "description": "I suggest a tailored solution with a detailed quote and delivery schedule"
+      },
+      "step3": {
+        "title": "Iterative development",
+        "description": "Short sprints with regular deliverables and feedback points to adjust as needed"
+      },
+      "step4": {
+        "title": "Delivery & Support",
+        "description": "Production deployment, training if needed, and ongoing support to ensure success"
+      },
+      "stats": {
+        "ontime": "Projects delivered on time",
+        "experience": "Years of experience",
+        "satisfaction": "Satisfaction guaranteed"
+      }
+    },
+    "about": {
+      "title": "About me",
+      "who": {
+        "title": "Who am I?",
+        "description": "Passionate fullstack developer, I combine technical expertise with a modern vision to create solutions that make a difference. My approach mixes rigor and creativity."
+      },
+      "journey": {
+        "title": "My journey",
+        "description": "Currently a developer at INSEE, I have gained solid experience in creating and maintaining critical systems. In parallel, I use my skills to support innovative projects as a freelancer."
+      },
+      "philosophy": {
+        "title": "My philosophy",
+        "description": "I believe in clean, maintainable, and high-performing code. Every project is an opportunity to push boundaries and create something exceptional."
+      },
+      "tech": {
+        "title": "Technologies mastered",
+        "java": "Robust backend",
+        "typescript": "Modern frontend",
+        "rust": "Performance",
+        "cloud": "Scalable architecture"
+      }
+    },
+    "contact": {
+      "title": "Ready to start your project?",
+      "subtitle": "Let’s discuss your ideas and turn them into reality",
+      "call": {
+        "title": "Schedule a call",
+        "description": "30 minutes to talk about your project and see how I can help"
+      },
+      "email": {
+        "title": "Send an email",
+        "description": "For detailed requests or specific questions"
+      },
+      "social": "Or find me on",
+      "cta": {
+        "title": "Don’t let your ideas just stay ideas",
+        "subtitle": "Let’s build something exceptional together",
+        "button": "Start now"
+      }
+    }
+  },
+  "cv": {
+    "header": {
+      "name": "James ABIB",
+      "title": "Fullstack Developer | Java & TypeScript & Rust",
+      "description": "Software engineer focused on architecture, passionate about clean code and robust systems.",
+      "experience": "{{years}}+ years at INSEE building and maintaining critical systems, and end-to-end delivery of a real client project (Upstra) using microservices/cloud.",
+      "vision": "I bring a modern vision (Rust, cloud, CI/CD), strong team spirit, and the ability to deliver high-quality products, fast."
+    },
+    "sections": {
+      "experience": "Professional Experience",
+      "education": "Education",
+      "skills": "Skills",
+      "projects": "Projects",
+      "languages": "Languages",
+      "interests": "Interests"
+    },
+    "experience": {
+      "upstra": {
+        "role": "Fullstack Developer",
+        "company": "Eurialys – Upstra Project",
+        "period": "March 2025 – Present · Freelance (real client, MSc validation)",
+        "description": "Design and development of the Upstra platform (infrastructure management for labs):<br>Microservices architecture (NestJS DDD/hexagonal), Python (UPS/iLO), Vue 3 frontend.<br>Docker Compose, modular API, client docs & demo."
+      },
+      "insee": {
+        "role": "Fullstack Developer (apprenticeship)",
+        "company": "INSEE",
+        "period": "Sep 2022 – Present",
+        "description": "Design, development & maintenance of critical APIs (Spring Boot 3, Java 21) + React frontend.<br>Modernization of data pipelines (Talend → Spring Batch 5.1).<br>Teamwork on high-impact public solutions."
+      }
+    },
+    "education": {
+      "msc": {
+        "degree": "Expert in Software Development and Architecture",
+        "school": "ESGI Paris – Software Architecture specialization",
+        "period": "2023-2025",
+        "description": "Master’s degree in Software Development and Architecture"
+      },
+      "bsc": {
+        "degree": "Software and Network Project Manager",
+        "school": "ESGI Paris – Software Architecture specialization",
+        "period": "2022-2023",
+        "description": "Bachelor’s degree in Software and Network Project Management"
+      },
+      "bts": {
+        "degree": "BTS in IT Services for Organizations (SLAM)",
+        "school": "Graduated in 2022",
+        "period": "2020-2022",
+        "description": "Result: 15.34/20"
+      }
+    },
+    "skills": {
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "devops": "DevOps & Tools",
+      "database": "Database"
+    },
+    "projects": {
+      "codeValley": {
+        "name": "Code Valley",
+        "description": "Social network for developers (like GitHub) with code sharing and execution. Microservices architecture with secure authentication, content management, isolated code execution, and web/mobile interfaces.",
+        "link": "https://github.com/CodeValleyy"
+      },
+      "frakt": {
+        "name": "Fractal Generator (frakt)",
+        "description": "High-performance fractal generator using complex math formulas (Julia, Mandelbrot, Newton-Raphson). Continuous integration and full documentation.",
+        "link": "github.com/jabibamman/frakt"
+      },
+      "greenItForward": {
+        "name": "GreenItForward",
+        "description": "Crowdfunding platform for environmental organizations. Enables participatory funding of ecological projects with contribution and impact tracking.",
+        "link": "github.com/greenitforward"
+      }
+    },
+    "languages": {
+      "french": "French (native)",
+      "english": "English (fluent)",
+      "spanish": "Spanish (intermediate)"
+    },
+    "interests": {
+      "tech": "Emerging technologies & Open Source",
+      "writing": "Technical article writing",
+      "mentoring": "Mentoring junior developers"
+    }
+  },
+  "wip": {
+    "title": "Work in Progress",
+    "description": "Sorry, this section is still under construction.",
+    "features": "New features",
+    "and": "and",
+    "tools": "cool tools",
+    "comingSoon": "coming soon!",
+    "returnHome": "← Back to home",
+    "messages": {
+      "building": "Building the future... Please wait.",
+      "hello": "Hello friend.",
+      "deploying": "Deploying creativity.",
+      "injecting": "Injecting TypeScript...",
+      "crafting": "Crafting the fullstack workspace."
+    }
+  }
+}

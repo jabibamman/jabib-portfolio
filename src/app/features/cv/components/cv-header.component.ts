@@ -1,10 +1,12 @@
 import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
+import { TranslatePipe } from "../../../core/pipes/translate.pipe";
+import { TranslationService } from "../../../core/services/translation.service";
 
 @Component({
   selector: "app-cv-header",
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   template: `
     <div
       class="flex items-center px-12 py-8 bg-gradient-to-r from-violet-500 to-pink-500 text-white relative">
@@ -13,18 +15,14 @@ import { Component } from "@angular/core";
         src="https://api.dicebear.com/8.x/adventurer/svg?seed=James&backgroundColor=ffe66d,7e5bef"
         alt="James ABIB" />
       <div class="flex-1">
-        <h1 class="text-3xl font-bold tracking-wide mb-1">James ABIB</h1>
+        <h1 class="text-3xl font-bold tracking-wide mb-1">{{ 'cv.header.name' | translate | async }}</h1>
         <div class="text-lg font-medium text-yellow-200 mb-1">
-          Fullstack Developer | Java &amp; Typescript &amp; Rust
+          {{ 'cv.header.title' | translate | async }}
         </div>
         <p class="text-white/95 leading-relaxed max-w-lg">
-          Software engineer focused on architecture, passionate about clean code
-          and robust systems.<br />
-          {{ yearsOfExperience }}+ years' experience at INSEE building and
-          maintaining critical systems, and end-to-end delivery of a real client
-          project (Upstra) using microservices/cloud.<br />
-          I bring a modern vision (Rust, cloud, CI/CD), strong team spirit, and
-          the ability to deliver high-quality products, fast.
+          {{ 'cv.header.description' | translate | async }}<br />
+          <span [innerHTML]="translatedExperience | async"></span><br />
+          {{ 'cv.header.vision' | translate | async }}
         </p>
       </div>
       <div
@@ -39,6 +37,11 @@ import { Component } from "@angular/core";
 })
 export class CvHeaderComponent {
   private readonly startDate = new Date("2021-01-01");
+  translatedExperience: any;
+
+  constructor(private translationService: TranslationService) {
+    this.translatedExperience = this.translationService.translate('cv.header.experience', { years: this.yearsOfExperience });
+  }
 
   get yearsOfExperience(): number {
     const now = new Date();
