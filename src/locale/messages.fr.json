@@ -216,5 +216,39 @@
       "injecting": "Injection de TypeScript...",
       "crafting": "Création de l'espace de travail fullstack."
     }
+  },
+  "legal": {
+    "title": "Mentions légales",
+    "lastUpdate": "Dernière mise à jour :",
+    "owner": {
+      "title": "Propriétaire du site",
+      "name": "Nom :",
+      "status": "Statut :",
+      "address": "Adresse :",
+      "siret": "N° SIRET :",
+      "legalForm": "Forme juridique :",
+      "apeCode": "Code APE :",
+      "publisher": "Responsable de la publication :"
+    },
+    "hosting": {
+      "title": "Hébergement du site",
+      "provider": "Hébergeur :",
+      "domain": "Nom de domaine géré par :"
+    },
+    "privacy": {
+      "title": "Protection des données personnelles (RGPD)",
+      "description": "Les informations éventuellement collectées via le formulaire de contact (nom, email, message) servent uniquement à répondre à votre demande et ne sont jamais cédées à des tiers.",
+      "rights": "Conformément à la loi « Informatique et Libertés » et au RGPD, vous pouvez exercer vos droits d'accès, de rectification ou de suppression en me contactant à l'adresse mentionnée ci-dessus."
+    },
+    "intellectual": {
+      "title": "Propriété intellectuelle",
+      "description": "L'ensemble des contenus présents sur ce site (textes, images, code, logo) sont la propriété exclusive de James ABIB AMMAN AMIR, sauf mention contraire."
+    },
+    "vat": {
+      "title": "Exonération de TVA",
+      "description": "TVA non applicable, art. 293 B du CGI."
+    },
+    "backHome": "Retour à l'accueil",
+    "footer": "Mentions légales"
   }
 }

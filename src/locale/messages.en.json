@@ -216,5 +216,39 @@
       "injecting": "Injecting TypeScript...",
       "crafting": "Crafting the fullstack workspace."
     }
+  },
+  "legal": {
+    "title": "Legal Notice",
+    "lastUpdate": "Last update:",
+    "owner": {
+      "title": "Site owner",
+      "name": "Name:",
+      "status": "Status:",
+      "address": "Address:",
+      "siret": "SIRET number:",
+      "legalForm": "Legal form:",
+      "apeCode": "APE code:",
+      "publisher": "Publisher:"
+    },
+    "hosting": {
+      "title": "Site hosting",
+      "provider": "Hosting provider:",
+      "domain": "Domain name managed by:"
+    },
+    "privacy": {
+      "title": "Personal data protection (GDPR)",
+      "description": "Any information collected via the contact form (name, email, message) is used solely to respond to your request and is never shared with third parties.",
+      "rights": "In accordance with the 'Data Protection Act' and GDPR, you can exercise your rights of access, rectification or deletion by contacting me at the address mentioned above."
+    },
+    "intellectual": {
+      "title": "Intellectual property",
+      "description": "All content on this site (texts, images, code, logo) is the exclusive property of James ABIB AMMAN AMIR, unless otherwise stated."
+    },
+    "vat": {
+      "title": "VAT exemption",
+      "description": "VAT not applicable, art. 293 B of the CGI."
+    },
+    "backHome": "Back to home",
+    "footer": "Legal notice"
   }
 }

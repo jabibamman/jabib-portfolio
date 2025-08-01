@@ -1,0 +1,110 @@
+<div class="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-950 to-black text-zinc-100">
+  <nav class="container mx-auto px-6 py-8">
+    <div class="flex items-center justify-between">
+      <a routerLink="/"
+        class="inline-flex items-center gap-2 text-zinc-400 hover:text-zinc-100 transition-colors duration-200">
+        <lucide-icon [img]="Home" size="20"></lucide-icon>
+        <span>{{ "legal.backHome" | translate | async }}</span>
+      </a>
+      <app-language-switcher></app-language-switcher>
+    </div>
+  </nav>
+
+  <div class="container mx-auto px-6 pb-20 max-w-4xl">
+    <header class="mb-16 text-center">
+      <h1
+        class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+        {{ "legal.title" | translate | async }}
+      </h1>
+      <p class="text-zinc-400">{{ "legal.lastUpdate" | translate | async }} {{ currentDate }}</p>
+    </header>
+
+    <div class="space-y-12">
+      <section class="bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-8 border border-zinc-800">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="p-2 bg-blue-500/10 rounded-lg">
+            <lucide-icon [img]="Building2" size="24" class="text-blue-400"></lucide-icon>
+          </div>
+          <h2 class="text-2xl font-semibold">{{ "legal.owner.title" | translate | async }}</h2>
+        </div>
+        <div class="space-y-3 text-zinc-300">
+          <p><span class="text-zinc-500">{{ "legal.owner.name" | translate | async }}</span> <strong>James ABIB AMMAN
+              AMIR</strong></p>
+          <p><span class="text-zinc-500">{{ "legal.owner.status" | translate | async }}</span> Micro-entrepreneur
+            (auto-entrepreneur)</p>
+          <p><span class="text-zinc-500">{{ "legal.owner.address" | translate | async }}</span> Guillerval 91690</p>
+          <p class="flex items-center gap-2">
+            <lucide-icon [img]="Mail" size="16" class="text-zinc-500"></lucide-icon>
+            <a href="mailto:james.abibamman@gmail.com" class="text-blue-400 hover:text-blue-300 transition-colors">
+              james.abibamman&#64;gmail.com
+            </a>
+          </p>
+          <div class="pt-4 space-y-2 border-t border-zinc-800 mt-4">
+            <p><span class="text-zinc-500">{{ "legal.owner.siret" | translate | async }}</span> 984 502 260 00018</p>
+            <p><span class="text-zinc-500">{{ "legal.owner.legalForm" | translate | async }}</span> Micro-entrepreneur
+              (EI)</p>
+            <p><span class="text-zinc-500">{{ "legal.owner.apeCode" | translate | async }}</span> 62.01Z</p>
+            <p><span class="text-zinc-500">{{ "legal.owner.publisher" | translate | async }}</span> James ABIB AMMAN
+              AMIR</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-8 border border-zinc-800">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="p-2 bg-purple-500/10 rounded-lg">
+            <lucide-icon [img]="Server" size="24" class="text-purple-400"></lucide-icon>
+          </div>
+          <h2 class="text-2xl font-semibold">{{ "legal.hosting.title" | translate | async }}</h2>
+        </div>
+        <div class="space-y-4 text-zinc-300">
+          <div>
+            <p class="font-medium mb-2">{{ "legal.hosting.provider" | translate | async }}</p>
+            <p class="text-zinc-400">Vercel Inc.</p>
+            <p class="text-zinc-400">340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis</p>
+          </div>
+          <div>
+            <p class="font-medium mb-2">{{ "legal.hosting.domain" | translate | async }}</p>
+            <p class="text-zinc-400">Cloudflare, Inc.</p>
+            <p class="text-zinc-400">101 Townsend St, San Francisco, CA 94107, États-Unis</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-8 border border-zinc-800">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="p-2 bg-green-500/10 rounded-lg">
+            <lucide-icon [img]="Shield" size="24" class="text-green-400"></lucide-icon>
+          </div>
+          <h2 class="text-2xl font-semibold">{{ "legal.privacy.title" | translate | async }}</h2>
+        </div>
+        <div class="space-y-4 text-zinc-300">
+          <p>
+            {{ "legal.privacy.description" | translate | async }}
+          </p>
+          <p>
+            {{ "legal.privacy.rights" | translate | async }}
+          </p>
+        </div>
+      </section>
+
+      <section class="bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-8 border border-zinc-800">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="p-2 bg-orange-500/10 rounded-lg">
+            <lucide-icon [img]="Copyright" size="24" class="text-orange-400"></lucide-icon>
+          </div>
+          <h2 class="text-2xl font-semibold">{{ "legal.intellectual.title" | translate | async }}</h2>
+        </div>
+        <p class="text-zinc-300">
+          {{ "legal.intellectual.description" | translate | async }}
+        </p>
+      </section>
+
+      <!-- TVA -->
+      <section class="bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-8 border border-zinc-800">
+        <h2 class="text-2xl font-semibold mb-4">{{ "legal.vat.title" | translate | async }}</h2>
+        <p class="text-zinc-300">{{ "legal.vat.description" | translate | async }}</p>
+      </section>
+    </div>
+  </div>
+</div>
