@@ -2,7 +2,7 @@ import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 
 @Component({
-  selector: "app-home-header",
+  selector: "app-cv-header",
   standalone: true,
   imports: [CommonModule],
   template: `
@@ -22,7 +22,7 @@ import { Component } from "@angular/core";
         <p class="text-white/95 leading-relaxed max-w-lg">
           Software engineer focused on architecture, passionate about clean code
           and robust systems.<br />
-          2+ years’ experience at INSEE building and maintaining critical
+          2+ years' experience at INSEE building and maintaining critical
           systems, and end-to-end delivery of a real client project (Upstra)
           using microservices/cloud.<br />
           I bring a modern vision (Rust, cloud, CI/CD), strong team spirit, and
@@ -41,4 +41,4 @@ import { Component } from "@angular/core";
     </div>
   `,
 })
-export class HomeHeaderComponent {}
+export class CvHeaderComponent {}

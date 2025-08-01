@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { HomeHeaderComponent } from "../components/home-header.component";
+import { CvHeaderComponent } from "../components/cv-header.component";
 import { ExperienceListComponent } from "../components/experience-list.component";
 import { SkillsComponent } from "../components/skills.component";
 import { ProjectsComponent } from "../components/projects.component";
@@ -7,17 +7,17 @@ import { EducationComponent } from "../components/education.component";
 import { LanguagesInterestsComponent } from "../components/languages-interests.component";
 
 @Component({
-  selector: "app-home",
+  selector: "app-cv",
   standalone: true,
   imports: [
-    HomeHeaderComponent,
+    CvHeaderComponent,
     ExperienceListComponent,
     SkillsComponent,
     ProjectsComponent,
     EducationComponent,
     LanguagesInterestsComponent,
   ],
-  templateUrl: "./home.component.html",
-  styleUrls: ["./home.component.css"],
+  templateUrl: "./cv.component.html",
+  styleUrls: ["./cv.component.css"],
 })
-export class HomeComponent {}
+export class CvComponent {}
