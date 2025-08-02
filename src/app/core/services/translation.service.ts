@@ -1,9 +1,15 @@
-import { Injectable, Inject, LOCALE_ID, PLATFORM_ID, APP_INITIALIZER } from "@angular/core";
+import {
+  Injectable,
+  Inject,
+  LOCALE_ID,
+  PLATFORM_ID,
+  APP_INITIALIZER,
+} from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable, BehaviorSubject, of } from "rxjs";
 import { map, shareReplay, catchError, switchMap } from "rxjs/operators";
 import { isPlatformBrowser } from "@angular/common";
-import { TranslationLoaderService } from './translation-loader.service';
+import { TranslationLoaderService } from "./translation-loader.service";
 
 @Injectable({
   providedIn: "root",
@@ -21,7 +27,15 @@ export class TranslationService {
     @Inject(PLATFORM_ID) private platformId: Object,
     private translationLoader: TranslationLoaderService
   ) {
-    this.currentLocale = locale || "fr";
+    if (
+      isPlatformBrowser(this.platformId) &&
+      typeof localStorage !== "undefined"
+    ) {
+      const savedLang = localStorage.getItem("preferredLanguage");
+      this.currentLocale = savedLang || locale || "fr";
+    } else {
+      this.currentLocale = locale || "fr";
+    }
     this.currentLocaleSubject.next(this.currentLocale);
   }
 
@@ -29,25 +43,44 @@ export class TranslationService {
     if (this.isInitialized) {
       return Promise.resolve();
     }
-    
-    return this.translationLoader.loadTranslations(this.currentLocale)
+
+    return this.translationLoader
+      .loadTranslations(this.currentLocale)
       .toPromise()
-      .then(translations => {
+      .then((translations) => {
         this.translations$.next(translations || {});
         this.isInitialized = true;
       })
-      .catch(error => {
-        console.error('Failed to initialize translations:', error);
+      .catch((error) => {
+        console.error("Failed to initialize translations:", error);
         this.translations$.next({});
         this.isInitialized = true;
       });
   }
 
   private loadTranslations(): void {
-    this.translationLoader.loadTranslations(this.currentLocale)
-      .subscribe((translations) => {
-        this.translations$.next(translations);
-      });
+    if (isPlatformBrowser(this.platformId)) {
+      this.http
+        .get(`/locale/messages.${this.currentLocale}.json`)
+        .pipe(
+          catchError((error) => {
+            console.error(
+              `Failed to load translations for ${this.currentLocale}:`,
+              error
+            );
+            return of({});
+          })
+        )
+        .subscribe((translations) => {
+          this.translations$.next(translations);
+        });
+    } else {
+      this.translationLoader
+        .loadTranslations(this.currentLocale)
+        .subscribe((translations) => {
+          this.translations$.next(translations);
+        });
+    }
   }
 
   translate(key: string, params?: any): Observable<string> {
@@ -100,6 +133,14 @@ export class TranslationService {
   setLocale(locale: string): void {
     this.currentLocale = locale;
     this.currentLocaleSubject.next(locale);
+
+    if (
+      isPlatformBrowser(this.platformId) &&
+      typeof localStorage !== "undefined"
+    ) {
+      localStorage.setItem("preferredLanguage", locale);
+    }
+
     this.loadTranslations();
   }
 
