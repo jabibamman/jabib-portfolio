@@ -24,7 +24,8 @@
         "developer": "Développeur",
         "fullstack": "Fullstack"
       },
-      "subtitle": "James ABIB - Architecte logiciel passionné par la création de solutions robustes et innovantes",
+      "subtitle": "James ABIB – Architecte logiciel passionné par la création de solutions robustes et innovantes",
+      "specialization": "Expert en clean code, qualité logicielle et architecture DDD/hexagonale, avec une forte expérience dans la création et la migration d’applications front et back-end scalables. Basé en région parisienne.",
       "techStack": {
         "java": "Java",
         "typescript": "TypeScript",
@@ -38,16 +39,16 @@
       "title": "Comment puis-je vous aider ?",
       "subtitle": "Des solutions sur mesure pour transformer vos idées en réalité",
       "fullstack": {
-        "title": "Développement Full-Stack",
-        "description": "Applications web modernes et performantes avec les dernières technologies"
+        "title": "Développement Full-Stack Java/Angular",
+        "description": "Applications web enterprise avec Spring Boot 3, Angular 18, architecture DDD et patterns hexagonaux. Expert migration Talend vers Spring Batch 5.1."
       },
       "cloud": {
-        "title": "Architecture Cloud",
-        "description": "Solutions scalables et sécurisées pour vos infrastructures modernes"
+        "title": "Architecture Cloud & Microservices",
+        "description": "Solutions scalables Docker/Kubernetes, NestJS, PostgreSQL/Redis et FinOps TCO analysis."
       },
       "consulting": {
-        "title": "Consulting & Formation",
-        "description": "Accompagnement personnalisé pour améliorer vos pratiques"
+        "title": "Consulting Architecture Logicielle",
+        "description": "Accompagnement modernisation legacy, Clean Architecture, Domain-Driven Design. Formation équipes développement agile."
       },
       "cta": "Un projet en tête ? Discutons-en !"
     },
@@ -80,15 +81,34 @@
       "title": "À propos de moi",
       "who": {
         "title": "Qui suis-je ?",
-        "description": "Développeur fullstack passionné, je combine expertise technique et vision moderne pour créer des solutions qui font la différence. Mon approche allie rigueur et créativité."
+        "intro": "Architecte logiciel fullstack passionné par la création de solutions robustes et innovantes. Diplômé d'un Master en Architecture Logicielle à l'ESGI Paris, je me spécialise dans la modernisation de systèmes legacy.",
+        "expertise1": "Java/TypeScript/Angular",
+        "expertise2": "Architecture DDD/Hexagonale",
+        "expertise3": "Consultant Freelance"
       },
       "journey": {
         "title": "Mon parcours",
-        "description": "Actuellement développeur à l'INSEE, j'ai acquis une solide expérience dans la création et maintenance de systèmes critiques. En parallèle, je mets mes compétences au service de projets innovants en tant qu'auto-entrepreneur."
+        "current": {
+          "title": "Formation actuelle (2023-2025)",
+          "description": "Master Architecture Logicielle à l'ESGI Paris, spécialisation en conception de systèmes complexes et patterns architecturaux modernes."
+        },
+        "past": {
+          "title": "Expérience INSEE (2022-2025)",
+          "description": "3 ans d'alternance : migration Talend vers Spring Batch 5.1, modernisation applications legacy, développement React-DSFR, rôle de Scrum Master."
+        },
+        "next": {
+          "title": "Prochaine mission (Sept 2025)",
+          "description": "Développeur Fullstack Java/Angular chez Casden Banque Populaire via Extia, pour continuer à développer mon expertise en environnement bancaire."
+        }
       },
       "philosophy": {
         "title": "Ma philosophie",
-        "description": "Je crois en un code propre, maintenable et performant. Chaque projet est une opportunité de repousser les limites et de créer quelque chose d'exceptionnel."
+        "quote": "« dire les choses comme elles sont »",
+        "approach": "Je privilégie la transparence et l'efficacité dans tous mes projets.",
+        "value1": "Clean Code & Qualité",
+        "value2": "Architecture Scalable",
+        "value3": "Accompagnement d'équipes",
+        "value4": "Innovation Technique"
       },
       "tech": {
         "title": "Technologies maîtrisées",
@@ -136,15 +156,15 @@
     "experience": {
       "upstra": {
         "role": "Développeur Fullstack",
-        "company": "Eurialys – Projet Upstra",
-        "period": "Mars 2025 – Présent · Freelance (client réel, validation MSc)",
-        "description": "Conception et développement de la plateforme Upstra (gestion d'infra pour laboratoires):<br>Architecture microservices (NestJS DDD/hexagonal), Python (UPS/iLO), front Vue 3.<br>Docker Compose, API modulaire, docs & démo client."
+        "company": "Eurialys – Projet Upstra (Alternative GLPI Laboratoires)",
+        "period": "Mars 2025 – Juillet 2025",
+        "description": "Conception complète plateforme SaaS gestion infrastructure laboratoires:<br>• Architecture DDD/Hexagonal avec NestJS, intégration UPS/iLO/VMware ESXi<br>• Frontend Vue 3 + Tailwind CSS, orchestration Docker/Kubernetes<br>• API REST modulaire, documentation technique, démo client validée"
       },
       "insee": {
-        "role": "Développeur Fullstack (alternance)",
-        "company": "INSEE",
-        "period": "Sep 2022 – Présent",
-        "description": "Conception, développement & maintenance d'APIs critiques (Spring Boot 3, Java 21) + front React.<br>Modernisation des pipelines de données (Talend → Spring Batch 5.1).<br>Travail d'équipe sur des solutions publiques à fort impact."
+        "role": "Développeur Fullstack(alternance)",
+        "company": "INSEE - Institut National de la Statistique",
+        "period": "Sep 2022 – Août 2025 (3 ans)",
+        "description": "Migration et modernisation systèmes critiques gouvernementaux:<br>• Expert migration Talend vers Spring Batch 5.1 (Java 11→21)<br>• Développement APIs Spring Boot 3 + interfaces React-DSFR<br>• Scrum Master : animation cérémonies, coordination équipes, qualité livrables<br>• Force de proposition architecture logicielle, systèmes haute disponibilité"
       }
     },
     "education": {
@@ -174,10 +194,17 @@
       "database": "Base de données"
     },
     "projects": {
+      "upstra": {
+        "name": "Upstra - Alternative GLPI pour Laboratoires",
+        "description": "SaaS B2B complet : gestion infrastructure laboratoires avec intégration UPS/iLO/VMware ESXi. Architecture DDD/Hexagonal NestJS, frontend Vue 3, orchestration Docker/Kubernetes. Projet client réel validé.",
+        "link": "https://upstra.jabib.dev",
+        "tech": "NestJS, Vue 3, Docker, PostgreSQL, Redis, UPS/iLO APIs"
+      },
       "codeValley": {
-        "name": "Code Valley",
-        "description": "Réseau social pour développeurs (type GitHub) avec partage et exécution de code. Architecture microservices avec authentification sécurisée, gestion de contenu, exécution de code isolée et interfaces web/mobile.",
-        "link": "https://github.com/CodeValleyy"
+        "name": "Code Valley - Réseau Social Développeurs",
+        "description": "Plateforme type GitHub avec partage et exécution de code sécurisée. Architecture microservices, authentification JWT, isolation containers, interfaces web/mobile responsive.",
+        "link": "https://github.com/CodeValleyy",
+        "tech": "Microservices, Docker, JWT, Mobile-first"
       },
       "frakt": {
         "name": "Générateur de Fractale (frakt)",
@@ -188,6 +215,12 @@
         "name": "GreenItForward",
         "description": "Plateforme de crowdfunding dédiée aux associations environnementales. Permet le financement participatif de projets écologiques avec suivi des contributions et des impacts.",
         "link": "github.com/greenitforward"
+      },
+      "vinstro": {
+        "name": "Vinstro - SaaS Multi-tenant Bars à Vin",
+        "description": "Plateforme SaaS gestion stock bars à vin : OCR factures automatisé, abonnements Stripe (FREE/STARTER/PRO/ELITE), architecture multi-tenant. Stack moderne Angular/NestJS.",
+        "link": "https://vinstro.jabib.dev",
+        "tech": "Angular 18, NestJS, Stripe, OCR, Multi-tenant Architecture"
       }
     },
     "languages": {

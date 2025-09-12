@@ -1,10 +1,10 @@
-import { Component } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { ExperienceCardComponent } from "./experience-card.component";
-import { TranslatePipe } from "../../../core/pipes/translate.pipe";
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ExperienceCardComponent } from './experience-card.component';
+import { TranslatePipe } from '../../../core/pipes/translate.pipe';
 
 @Component({
-  selector: "app-experience-list",
+  selector: 'app-experience-list',
   standalone: true,
   imports: [CommonModule, ExperienceCardComponent, TranslatePipe],
   template: `

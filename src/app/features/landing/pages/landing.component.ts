@@ -1,12 +1,12 @@
-import { Component } from "@angular/core";
-import { HeroSectionComponent } from "../components/hero-section/hero-section.component";
-import { ServicesComponent } from "../components/services/services.component";
-import { ProcessComponent } from "../components/process/process.component";
-import { AboutComponent } from "../components/about/about.component";
-import { ContactComponent } from "../components/contact/contact.component";
+import { Component } from '@angular/core';
+import { HeroSectionComponent } from '../components/hero-section/hero-section.component';
+import { ServicesComponent } from '../components/services/services.component';
+import { ProcessComponent } from '../components/process/process.component';
+import { AboutComponent } from '../components/about/about.component';
+import { ContactComponent } from '../components/contact/contact.component';
 
 @Component({
-  selector: "app-landing",
+  selector: 'app-landing',
   standalone: true,
   imports: [
     HeroSectionComponent,

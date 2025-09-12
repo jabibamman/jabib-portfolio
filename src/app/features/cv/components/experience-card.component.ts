@@ -1,13 +1,12 @@
-import { CommonModule } from "@angular/common";
-import { Component, Input } from "@angular/core";
+import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: "app-experience-card",
+  selector: 'app-experience-card',
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div
-      class="bg-zinc-800 rounded-xl p-6 flex flex-col shadow border-l-8 border-violet-500">
+    <div class="bg-zinc-800 rounded-xl p-6 flex flex-col shadow border-l-8 border-violet-500">
       <div class="text-lg font-bold text-white mb-2 truncate">{{ role }}</div>
       <div class="text-pink-400 font-semibold mb-1">{{ company }}</div>
       <div class="text-xs text-zinc-400 mb-1">{{ period }}</div>

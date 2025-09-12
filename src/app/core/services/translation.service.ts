@@ -1,23 +1,17 @@
-import {
-  Injectable,
-  Inject,
-  LOCALE_ID,
-  PLATFORM_ID,
-  APP_INITIALIZER,
-} from "@angular/core";
-import { HttpClient } from "@angular/common/http";
-import { Observable, BehaviorSubject, of } from "rxjs";
-import { map, shareReplay, catchError, switchMap } from "rxjs/operators";
-import { isPlatformBrowser } from "@angular/common";
-import { TranslationLoaderService } from "./translation-loader.service";
+import { Injectable, Inject, LOCALE_ID, PLATFORM_ID, APP_INITIALIZER } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable, BehaviorSubject, of } from 'rxjs';
+import { map, shareReplay, catchError, switchMap } from 'rxjs/operators';
+import { isPlatformBrowser } from '@angular/common';
+import { TranslationLoaderService } from './translation-loader.service';
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class TranslationService {
   private translations$ = new BehaviorSubject<any>({});
   private currentLocale: string;
-  private currentLocaleSubject = new BehaviorSubject<string>("fr");
+  private currentLocaleSubject = new BehaviorSubject<string>('fr');
   currentLang$ = this.currentLocaleSubject.asObservable();
   private isInitialized = false;
 
@@ -27,14 +21,11 @@ export class TranslationService {
     @Inject(PLATFORM_ID) private platformId: Object,
     private translationLoader: TranslationLoaderService
   ) {
-    if (
-      isPlatformBrowser(this.platformId) &&
-      typeof localStorage !== "undefined"
-    ) {
-      const savedLang = localStorage.getItem("preferredLanguage");
-      this.currentLocale = savedLang || locale || "fr";
+    if (isPlatformBrowser(this.platformId) && typeof localStorage !== 'undefined') {
+      const savedLang = localStorage.getItem('preferredLanguage');
+      this.currentLocale = savedLang || locale || 'fr';
     } else {
-      this.currentLocale = locale || "fr";
+      this.currentLocale = locale || 'fr';
     }
     this.currentLocaleSubject.next(this.currentLocale);
   }
@@ -47,12 +38,12 @@ export class TranslationService {
     return this.translationLoader
       .loadTranslations(this.currentLocale)
       .toPromise()
-      .then((translations) => {
+      .then(translations => {
         this.translations$.next(translations || {});
         this.isInitialized = true;
       })
-      .catch((error) => {
-        console.error("Failed to initialize translations:", error);
+      .catch(error => {
+        console.error('Failed to initialize translations:', error);
         this.translations$.next({});
         this.isInitialized = true;
       });
@@ -63,30 +54,25 @@ export class TranslationService {
       this.http
         .get(`/locale/messages.${this.currentLocale}.json`)
         .pipe(
-          catchError((error) => {
-            console.error(
-              `Failed to load translations for ${this.currentLocale}:`,
-              error
-            );
+          catchError(error => {
+            console.error(`Failed to load translations for ${this.currentLocale}:`, error);
             return of({});
           })
         )
-        .subscribe((translations) => {
+        .subscribe(translations => {
           this.translations$.next(translations);
         });
     } else {
-      this.translationLoader
-        .loadTranslations(this.currentLocale)
-        .subscribe((translations) => {
-          this.translations$.next(translations);
-        });
+      this.translationLoader.loadTranslations(this.currentLocale).subscribe(translations => {
+        this.translations$.next(translations);
+      });
     }
   }
 
   translate(key: string, params?: any): Observable<string> {
     return this.translations$.pipe(
-      map((translations) => {
-        const keys = key.split(".");
+      map(translations => {
+        const keys = key.split('.');
         let value = translations;
 
         for (const k of keys) {
@@ -97,8 +83,8 @@ export class TranslationService {
           }
         }
 
-        if (params && typeof value === "string") {
-          Object.keys(params).forEach((param) => {
+        if (params && typeof value === 'string') {
+          Object.keys(params).forEach(param => {
             value = value.replace(`{{${param}}}`, params[param]);
           });
         }
@@ -110,7 +96,7 @@ export class TranslationService {
 
   instant(key: string, params?: any): string {
     const translations = this.translations$.value;
-    const keys = key.split(".");
+    const keys = key.split('.');
     let value = translations;
 
     for (const k of keys) {
@@ -121,8 +107,8 @@ export class TranslationService {
       }
     }
 
-    if (params && typeof value === "string") {
-      Object.keys(params).forEach((param) => {
+    if (params && typeof value === 'string') {
+      Object.keys(params).forEach(param => {
         value = value.replace(`{{${param}}}`, params[param]);
       });
     }
@@ -134,11 +120,8 @@ export class TranslationService {
     this.currentLocale = locale;
     this.currentLocaleSubject.next(locale);
 
-    if (
-      isPlatformBrowser(this.platformId) &&
-      typeof localStorage !== "undefined"
-    ) {
-      localStorage.setItem("preferredLanguage", locale);
+    if (isPlatformBrowser(this.platformId) && typeof localStorage !== 'undefined') {
+      localStorage.setItem('preferredLanguage', locale);
     }
 
     this.loadTranslations();

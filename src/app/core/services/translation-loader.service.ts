@@ -1,13 +1,13 @@
-import { Injectable, Inject, PLATFORM_ID } from "@angular/core";
-import { isPlatformBrowser } from "@angular/common";
-import { HttpClient } from "@angular/common/http";
-import { Observable, of } from "rxjs";
-import { catchError, tap } from "rxjs/operators";
-import * as translationsFr from "../../../locale/messages.fr.json";
-import * as translationsEn from "../../../locale/messages.en.json";
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
+import { catchError, tap } from 'rxjs/operators';
+import * as translationsFr from '../../../locale/messages.fr.json';
+import * as translationsEn from '../../../locale/messages.en.json';
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class TranslationLoaderService {
   private cache = new Map<string, any>();
@@ -30,17 +30,15 @@ export class TranslationLoaderService {
 
     if (isPlatformBrowser(this.platformId)) {
       return this.http.get(`/locale/messages.${locale}.json`).pipe(
-        tap((translations) => this.cache.set(cacheKey, translations)),
-        catchError((error) => {
+        tap(translations => this.cache.set(cacheKey, translations)),
+        catchError(error => {
           console.error(`Failed to load translations for ${locale}:`, error);
           return of({});
         })
       );
     } else {
       const translations =
-        this.staticTranslations[
-          locale as keyof typeof this.staticTranslations
-        ] || {};
+        this.staticTranslations[locale as keyof typeof this.staticTranslations] || {};
       this.cache.set(cacheKey, translations);
       return of(translations);
     }

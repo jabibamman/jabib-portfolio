@@ -1,7 +1,10 @@
 <div class="min-h-screen bg-zinc-950">
   <div class="relative">
     <div class="absolute top-4 left-4 z-10">
-      <button (click)="goBack()" class="flex items-center gap-2 px-4 py-2 bg-zinc-800 hover:bg-zinc-700 text-white rounded-lg transition-colors">
+      <button
+        (click)="goBack()"
+        class="flex items-center gap-2 px-4 py-2 bg-zinc-800 hover:bg-zinc-700 text-white rounded-lg transition-colors"
+      >
         <lucide-icon name="arrow-left" [size]="20"></lucide-icon>
         <span>Retour</span>
       </button>
@@ -9,7 +12,7 @@
     <div class="absolute top-4 right-4 z-10">
       <app-language-switcher />
     </div>
-    
+
     <div class="max-w-4xl mx-auto bg-zinc-900 rounded-2xl shadow-2xl border border-zinc-800 overflow-hidden mt-10">
       <app-cv-header />
       <app-experience-list />
@@ -20,4 +23,3 @@
     </div>
   </div>
 </div>
-  

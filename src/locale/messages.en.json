@@ -25,6 +25,7 @@
         "fullstack": "Fullstack"
       },
       "subtitle": "James ABIB – Software architect passionate about building robust and innovative solutions",
+      "specialization": "Expert in clean code, software quality and DDD/hexagonal architecture, with strong experience in creating and migrating scalable front-end and back-end applications. Based in Paris region.",
       "techStack": {
         "java": "Java",
         "typescript": "TypeScript",
@@ -38,18 +39,18 @@
       "title": "How can I help you?",
       "subtitle": "Tailored solutions to turn your ideas into reality",
       "fullstack": {
-        "title": "Full-Stack Development",
-        "description": "Modern, high-performance web applications using the latest technologies"
+        "title": "Full-Stack Java/Angular Development",
+        "description": "Enterprise web applications with Spring Boot 3, Angular 18, DDD architecture and hexagonal patterns. Expert in Talend to Spring Batch 5.1 migration."
       },
       "cloud": {
-        "title": "Cloud Architecture",
-        "description": "Scalable and secure solutions for your modern infrastructures"
+        "title": "Cloud Architecture & Microservices",
+        "description": "Scalable Docker/Kubernetes solutions, NestJS, PostgreSQL/Redis and FinOps TCO analysis."
       },
       "consulting": {
-        "title": "Consulting & Training",
-        "description": "Personalized support to improve your practices"
+        "title": "Software Architecture Consulting",
+        "description": "Legacy modernization support, Clean Architecture, Domain-Driven Design. Agile development team training."
       },
-      "cta": "Got a project in mind? Let’s talk!"
+      "cta": "Got a project in mind? Let's discuss it!"
     },
     "process": {
       "title": "A process that works",
@@ -80,18 +81,37 @@
       "title": "About me",
       "who": {
         "title": "Who am I?",
-        "description": "Passionate fullstack developer, I combine technical expertise with a modern vision to create solutions that make a difference. My approach mixes rigor and creativity."
+        "intro": "Fullstack software architect passionate about building robust and innovative solutions. Graduated with a Master's in Software Architecture from ESGI Paris, I specialize in modernizing legacy systems.",
+        "expertise1": "Java/TypeScript/Angular",
+        "expertise2": "DDD/Hexagonal Architecture",
+        "expertise3": "Freelance Consultant"
       },
       "journey": {
         "title": "My journey",
-        "description": "Currently a developer at INSEE, I have gained solid experience in creating and maintaining critical systems. In parallel, I use my skills to support innovative projects as a freelancer."
+        "current": {
+          "title": "Current Education (2023-2025)",
+          "description": "Master's in Software Architecture at ESGI Paris, specializing in complex system design and modern architectural patterns."
+        },
+        "past": {
+          "title": "INSEE Experience (2022-2025)",
+          "description": "3-year apprenticeship: Talend to Spring Batch 5.1 migration, legacy application modernization, React-DSFR development, Scrum Master role."
+        },
+        "next": {
+          "title": "Next Mission (Sept 2025)",
+          "description": "Fullstack Java/Angular Developer at Casden Banque Populaire via Extia, to continue developing my expertise in banking environments."
+        }
       },
       "philosophy": {
         "title": "My philosophy",
-        "description": "I believe in clean, maintainable, and high-performing code. Every project is an opportunity to push boundaries and create something exceptional."
+        "quote": "\"telling things as they are\"",
+        "approach": "I prioritize transparency and efficiency in all my projects.",
+        "value1": "Clean Code & Quality",
+        "value2": "Scalable Architecture",
+        "value3": "Team Mentoring",
+        "value4": "Technical Innovation"
       },
       "tech": {
-        "title": "Technologies mastered",
+        "title": "Mastered technologies",
         "java": "Robust backend",
         "typescript": "Modern frontend",
         "rust": "Performance",
@@ -100,7 +120,7 @@
     },
     "contact": {
       "title": "Ready to start your project?",
-      "subtitle": "Let’s discuss your ideas and turn them into reality",
+      "subtitle": "Let's discuss your ideas and turn them into reality",
       "call": {
         "title": "Schedule a call",
         "description": "30 minutes to talk about your project and see how I can help"
@@ -111,8 +131,8 @@
       },
       "social": "Or find me on",
       "cta": {
-        "title": "Don’t let your ideas just stay ideas",
-        "subtitle": "Let’s build something exceptional together",
+        "title": "Don't let your ideas just stay ideas",
+        "subtitle": "Let's build something exceptional together",
         "button": "Start now"
       }
     }
@@ -122,7 +142,7 @@
       "name": "James ABIB",
       "title": "Fullstack Developer | Java & TypeScript & Rust",
       "description": "Software engineer focused on architecture, passionate about clean code and robust systems.",
-      "experience": "{{years}}+ years at INSEE building and maintaining critical systems, and end-to-end delivery of a real client project (Upstra) using microservices/cloud.",
+      "experience": "{{years}}+ years of experience at INSEE building and maintaining critical systems, and end-to-end delivery of a real client project (Upstra) using microservices/cloud.",
       "vision": "I bring a modern vision (Rust, cloud, CI/CD), strong team spirit, and the ability to deliver high-quality products, fast."
     },
     "sections": {
@@ -136,32 +156,32 @@
     "experience": {
       "upstra": {
         "role": "Fullstack Developer",
-        "company": "Eurialys – Upstra Project",
-        "period": "March 2025 – Present · Freelance (real client, MSc validation)",
-        "description": "Design and development of the Upstra platform (infrastructure management for labs):<br>Microservices architecture (NestJS DDD/hexagonal), Python (UPS/iLO), Vue 3 frontend.<br>Docker Compose, modular API, client docs & demo."
+        "company": "Eurialys – Upstra Project (GLPI Alternative for Laboratories)",
+        "period": "March 2025 – July 2025",
+        "description": "Complete design of SaaS platform for laboratory infrastructure management:<br>• DDD/Hexagonal architecture with NestJS, UPS/iLO/VMware ESXi integration<br>• Vue 3 + Tailwind CSS frontend, Docker/Kubernetes orchestration<br>• Modular REST API, technical documentation, validated client demo"
       },
       "insee": {
         "role": "Fullstack Developer (apprenticeship)",
-        "company": "INSEE",
-        "period": "Sep 2022 – Present",
-        "description": "Design, development & maintenance of critical APIs (Spring Boot 3, Java 21) + React frontend.<br>Modernization of data pipelines (Talend → Spring Batch 5.1).<br>Teamwork on high-impact public solutions."
+        "company": "INSEE - National Institute of Statistics",
+        "period": "Sep 2022 – Aug 2025 (3 years)",
+        "description": "Migration and modernization of critical government systems:<br>• Expert in Talend to Spring Batch 5.1 migration (Java 11→21)<br>• Spring Boot 3 API development + React-DSFR interfaces<br>• Scrum Master: ceremony facilitation, team coordination, deliverable quality<br>• Software architecture proposals, high-availability systems"
       }
     },
     "education": {
       "msc": {
-        "degree": "Expert in Software Development and Architecture",
-        "school": "ESGI Paris – Software Architecture specialization",
+        "degree": "Expert in Development Engineering and Software Architecture",
+        "school": "ESGI Paris - Software Architecture Option",
         "period": "2023-2025",
-        "description": "Master’s degree in Software Development and Architecture"
+        "description": "Master's degree (Level Bac +5) - Software architecture specialization"
       },
       "bsc": {
         "degree": "Software and Network Project Manager",
-        "school": "ESGI Paris – Software Architecture specialization",
+        "school": "ESGI Paris - Software Architecture Option",
         "period": "2022-2023",
-        "description": "Bachelor’s degree in Software and Network Project Management"
+        "description": "Bachelor's degree (Level Bac +3) - Software architecture"
       },
       "bts": {
-        "degree": "BTS in IT Services for Organizations (SLAM)",
+        "degree": "BTS IT Services for Organizations SLAM",
         "school": "Graduated in 2022",
         "period": "2020-2022",
         "description": "Result: 15.34/20"
@@ -174,20 +194,33 @@
       "database": "Database"
     },
     "projects": {
+      "upstra": {
+        "name": "Upstra - GLPI Alternative for Laboratories",
+        "description": "Complete B2B SaaS: laboratory infrastructure management with UPS/iLO/VMware ESXi integration. DDD/Hexagonal NestJS architecture, Vue 3 frontend, Docker/Kubernetes orchestration. Real validated client project.",
+        "link": "https://upstra.jabib.dev",
+        "tech": "NestJS, Vue 3, Docker, PostgreSQL, Redis, UPS/iLO APIs"
+      },
       "codeValley": {
-        "name": "Code Valley",
-        "description": "Social network for developers (like GitHub) with code sharing and execution. Microservices architecture with secure authentication, content management, isolated code execution, and web/mobile interfaces.",
-        "link": "https://github.com/CodeValleyy"
+        "name": "Code Valley - Developer Social Network",
+        "description": "GitHub-like platform with secure code sharing and execution. Microservices architecture, JWT authentication, container isolation, responsive web/mobile interfaces.",
+        "link": "https://github.com/CodeValleyy",
+        "tech": "Microservices, Docker, JWT, Mobile-first"
       },
       "frakt": {
         "name": "Fractal Generator (frakt)",
-        "description": "High-performance fractal generator using complex math formulas (Julia, Mandelbrot, Newton-Raphson). Continuous integration and full documentation.",
+        "description": "High-performance fractal generator using complex mathematical formulas (Julia, Mandelbrot, Newton-Raphson). Continuous integration and complete documentation.",
         "link": "github.com/jabibamman/frakt"
       },
       "greenItForward": {
         "name": "GreenItForward",
-        "description": "Crowdfunding platform for environmental organizations. Enables participatory funding of ecological projects with contribution and impact tracking.",
+        "description": "Crowdfunding platform dedicated to environmental associations. Enables participatory funding of ecological projects with contribution and impact tracking.",
         "link": "github.com/greenitforward"
+      },
+      "vinstro": {
+        "name": "Vinstro - Multi-tenant SaaS Wine Bars",
+        "description": "SaaS wine bar stock management platform: automated OCR invoicing, Stripe subscriptions (FREE/STARTER/PRO/ELITE), multi-tenant architecture. Modern Angular/NestJS stack.",
+        "link": "https://vinstro.jabib.dev",
+        "tech": "Angular 18, NestJS, Stripe, OCR, Multi-tenant Architecture"
       }
     },
     "languages": {

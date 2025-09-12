@@ -1,13 +1,12 @@
-import { CommonModule } from "@angular/common";
-import { Component, Input } from "@angular/core";
+import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: "app-project-card",
+  selector: 'app-project-card',
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div
-      class="bg-zinc-800 rounded-xl p-6 flex flex-col shadow border-l-8 border-pink-500">
+    <div class="bg-zinc-800 rounded-xl p-6 flex flex-col shadow border-l-8 border-pink-500">
       <div class="text-lg font-bold text-white mb-2">{{ name }}</div>
       <div class="text-white/90 mb-3" [innerHTML]="description"></div>
       <div class="text-xs text-violet-300 font-mono mb-3">{{ link }}</div>

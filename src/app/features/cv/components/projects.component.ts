@@ -1,11 +1,11 @@
-import { Component } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { TranslatePipe } from "../../../core/pipes/translate.pipe";
-import { ProjectCardComponent } from "./project-card.component";
-import { TranslationService } from "../../../core/services/translation.service";
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { TranslatePipe } from '../../../core/pipes/translate.pipe';
+import { ProjectCardComponent } from './project-card.component';
+import { TranslationService } from '../../../core/services/translation.service';
 
 @Component({
-  selector: "app-projects",
+  selector: 'app-projects',
   standalone: true,
   imports: [CommonModule, TranslatePipe, ProjectCardComponent],
   template: `
@@ -20,7 +20,15 @@ import { TranslationService } from "../../../core/services/translation.service";
           [name]="translationService.instant('cv.projects.codeValley.name')"
           [description]="translationService.instant('cv.projects.codeValley.description')"
           [link]="translationService.instant('cv.projects.codeValley.link')"
-          [technologies]="['NestJS', 'Rust', 'PostgreSQL', 'MongoDB', 'Kubernetes', 'Vue.js', 'Kotlin']"
+          [technologies]="[
+            'NestJS',
+            'Rust',
+            'PostgreSQL',
+            'MongoDB',
+            'Kubernetes',
+            'Vue.js',
+            'Kotlin',
+          ]"
         />
         <app-project-card
           [name]="translationService.instant('cv.projects.frakt.name')"

@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+pnpm-lock.yaml
+package-lock.json
+
+# Build outputs
+dist/
+.angular/
+coverage/
+
+# Environment files
+.env*
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+
+# Other
+*.log

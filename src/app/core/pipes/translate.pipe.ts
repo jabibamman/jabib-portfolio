@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 @Pipe({
   name: 'translate',
-  standalone: true
+  standalone: true,
 })
 export class TranslatePipe implements PipeTransform {
   constructor(private translationService: TranslationService) {}
