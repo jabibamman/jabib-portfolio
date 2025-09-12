@@ -1,10 +1,18 @@
 import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { catchError, tap } from 'rxjs/operators';
-import * as translationsFr from '../../../locale/messages.fr.json';
-import * as translationsEn from '../../../locale/messages.en.json';
+// Import modular translations
+import * as commonFr from '../../../locale/fr/common.json';
+import * as landingFr from '../../../locale/fr/landing.json';
+import * as cvFr from '../../../locale/fr/cv.json';
+import * as wipFr from '../../../locale/fr/wip.json';
+import * as legalFr from '../../../locale/fr/legal.json';
+
+import * as commonEn from '../../../locale/en/common.json';
+import * as landingEn from '../../../locale/en/landing.json';
+import * as cvEn from '../../../locale/en/cv.json';
+import * as wipEn from '../../../locale/en/wip.json';
+import * as legalEn from '../../../locale/en/legal.json';
 
 @Injectable({
   providedIn: 'root',
@@ -12,8 +20,20 @@ import * as translationsEn from '../../../locale/messages.en.json';
 export class TranslationLoaderService {
   private cache = new Map<string, any>();
   private staticTranslations = {
-    fr: translationsFr,
-    en: translationsEn,
+    fr: {
+      common: commonFr,
+      landing: landingFr,
+      cv: cvFr,
+      wip: wipFr,
+      legal: legalFr,
+    },
+    en: {
+      common: commonEn,
+      landing: landingEn,
+      cv: cvEn,
+      wip: wipEn,
+      legal: legalEn,
+    },
   };
 
   constructor(
@@ -28,19 +48,20 @@ export class TranslationLoaderService {
       return of(this.cache.get(cacheKey));
     }
 
-    if (isPlatformBrowser(this.platformId)) {
-      return this.http.get(`/locale/messages.${locale}.json`).pipe(
-        tap(translations => this.cache.set(cacheKey, translations)),
-        catchError(error => {
-          console.error(`Failed to load translations for ${locale}:`, error);
-          return of({});
-        })
-      );
-    } else {
-      const translations =
-        this.staticTranslations[locale as keyof typeof this.staticTranslations] || {};
-      this.cache.set(cacheKey, translations);
-      return of(translations);
+    // Combine all modules for the locale
+    const localeModules = this.staticTranslations[locale as keyof typeof this.staticTranslations];
+    if (localeModules) {
+      const combined = {
+        common: localeModules.common,
+        landing: localeModules.landing,
+        cv: localeModules.cv,
+        wip: localeModules.wip,
+        legal: localeModules.legal,
+      };
+      this.cache.set(cacheKey, combined);
+      return of(combined);
     }
+
+    return of({});
   }
 }

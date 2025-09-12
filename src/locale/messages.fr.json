@@ -161,7 +161,7 @@
         "description": "Conception complète plateforme SaaS gestion infrastructure laboratoires:<br>• Architecture DDD/Hexagonal avec NestJS, intégration UPS/iLO/VMware ESXi<br>• Frontend Vue 3 + Tailwind CSS, orchestration Docker/Kubernetes<br>• API REST modulaire, documentation technique, démo client validée"
       },
       "insee": {
-        "role": "Développeur Fullstack(alternance)",
+        "role": "Développeur Fullstack (alternance)",
         "company": "INSEE - Institut National de la Statistique",
         "period": "Sep 2022 – Août 2025 (3 ans)",
         "description": "Migration et modernisation systèmes critiques gouvernementaux:<br>• Expert migration Talend vers Spring Batch 5.1 (Java 11→21)<br>• Développement APIs Spring Boot 3 + interfaces React-DSFR<br>• Scrum Master : animation cérémonies, coordination équipes, qualité livrables<br>• Force de proposition architecture logicielle, systèmes haute disponibilité"

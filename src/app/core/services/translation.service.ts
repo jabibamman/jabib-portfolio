@@ -1,7 +1,7 @@
-import { Injectable, Inject, LOCALE_ID, PLATFORM_ID, APP_INITIALIZER } from '@angular/core';
+import { Injectable, Inject, LOCALE_ID, PLATFORM_ID } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, BehaviorSubject, of } from 'rxjs';
-import { map, shareReplay, catchError, switchMap } from 'rxjs/operators';
+import { Observable, BehaviorSubject } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { isPlatformBrowser } from '@angular/common';
 import { TranslationLoaderService } from './translation-loader.service';
 
@@ -11,7 +11,7 @@ import { TranslationLoaderService } from './translation-loader.service';
 export class TranslationService {
   private translations$ = new BehaviorSubject<any>({});
   private currentLocale: string;
-  private currentLocaleSubject = new BehaviorSubject<string>('fr');
+  private readonly currentLocaleSubject = new BehaviorSubject<string>('fr');
   currentLang$ = this.currentLocaleSubject.asObservable();
   private isInitialized = false;
 
@@ -50,23 +50,9 @@ export class TranslationService {
   }
 
   private loadTranslations(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      this.http
-        .get(`/locale/messages.${this.currentLocale}.json`)
-        .pipe(
-          catchError(error => {
-            console.error(`Failed to load translations for ${this.currentLocale}:`, error);
-            return of({});
-          })
-        )
-        .subscribe(translations => {
-          this.translations$.next(translations);
-        });
-    } else {
-      this.translationLoader.loadTranslations(this.currentLocale).subscribe(translations => {
-        this.translations$.next(translations);
-      });
-    }
+    this.translationLoader.loadTranslations(this.currentLocale).subscribe(translations => {
+      this.translations$.next(translations);
+    });
   }
 
   translate(key: string, params?: any): Observable<string> {

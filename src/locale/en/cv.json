@@ -1,0 +1,97 @@
+{
+  "header": {
+    "name": "James ABIB",
+    "title": "Fullstack Developer | Java & TypeScript & Rust",
+    "description": "Software engineer focused on architecture, passionate about clean code and robust systems.",
+    "experience": "{{years}}+ years of experience at INSEE building and maintaining critical systems, and end-to-end delivery of a real client project (Upstra) using microservices/cloud.",
+    "vision": "I bring a modern vision (Rust, cloud, CI/CD), strong team spirit, and the ability to deliver high-quality products, fast."
+  },
+  "sections": {
+    "experience": "Professional Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "projects": "Projects",
+    "languages": "Languages",
+    "interests": "Interests"
+  },
+  "experience": {
+    "upstra": {
+      "role": "Fullstack Developer",
+      "company": "Eurialys – Upstra Project (GLPI Alternative for Laboratories)",
+      "period": "March 2025 – July 2025",
+      "description": "Complete design of SaaS platform for laboratory infrastructure management:<br>• DDD/Hexagonal architecture with NestJS, UPS/iLO/VMware ESXi integration<br>• Vue 3 + Tailwind CSS frontend, Docker/Kubernetes orchestration<br>• Modular REST API, technical documentation, validated client demo"
+    },
+    "insee": {
+      "role": "Fullstack Developer (apprenticeship)",
+      "company": "INSEE - National Institute of Statistics",
+      "period": "Sep 2022 – Aug 2025 (3 years)",
+      "description": "Migration and modernization of critical government systems:<br>• Expert in Talend to Spring Batch 5.1 migration (Java 11→21)<br>• Spring Boot 3 API development + React-DSFR interfaces<br>• Scrum Master: ceremony facilitation, team coordination, deliverable quality<br>• Software architecture proposals, high-availability systems"
+    }
+  },
+  "education": {
+    "msc": {
+      "degree": "Expert in Development Engineering and Software Architecture",
+      "school": "ESGI Paris - Software Architecture Option",
+      "period": "2023-2025",
+      "description": "Master's degree (Level Bac +5) - Software architecture specialization"
+    },
+    "bsc": {
+      "degree": "Software and Network Project Manager",
+      "school": "ESGI Paris - Software Architecture Option",
+      "period": "2022-2023",
+      "description": "Bachelor's degree (Level Bac +3) - Software architecture"
+    },
+    "bts": {
+      "degree": "BTS IT Services for Organizations SLAM",
+      "school": "Graduated in 2022",
+      "period": "2020-2022",
+      "description": "Result: 15.34/20"
+    }
+  },
+  "skills": {
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "devops": "DevOps & Tools",
+    "database": "Database"
+  },
+  "projects": {
+    "upstra": {
+      "name": "Upstra - GLPI Alternative for Laboratories",
+      "description": "Complete B2B SaaS: laboratory infrastructure management with UPS/iLO/VMware ESXi integration. DDD/Hexagonal NestJS architecture, Vue 3 frontend, Docker/Kubernetes orchestration. Real validated client project.",
+      "link": "https://upstra.jabib.dev",
+      "tech": "NestJS, Vue 3, Docker, PostgreSQL, Redis, UPS/iLO APIs"
+    },
+    "codeValley": {
+      "name": "Code Valley - Developer Social Network",
+      "description": "GitHub-like platform with secure code sharing and execution. Microservices architecture, JWT authentication, container isolation, responsive web/mobile interfaces.",
+      "link": "https://github.com/CodeValleyy",
+      "tech": "Microservices, Docker, JWT, Mobile-first"
+    },
+    "frakt": {
+      "name": "Fractal Generator (frakt)",
+      "description": "High-performance fractal generator using complex mathematical formulas (Julia, Mandelbrot, Newton-Raphson). Continuous integration and complete documentation.",
+      "link": "github.com/jabibamman/frakt"
+    },
+    "greenItForward": {
+      "name": "GreenItForward",
+      "description": "Crowdfunding platform dedicated to environmental associations. Enables participatory funding of ecological projects with contribution and impact tracking.",
+      "link": "github.com/greenitforward"
+    },
+    "vinstro": {
+      "name": "Vinstro - Multi-tenant SaaS Wine Bars",
+      "description": "SaaS wine bar stock management platform: automated OCR invoicing, Stripe subscriptions (FREE/STARTER/PRO/ELITE), multi-tenant architecture. Modern Angular/NestJS stack.",
+      "link": "https://vinstro.jabib.dev",
+      "tech": "Angular 18, NestJS, Stripe, OCR, Multi-tenant Architecture"
+    }
+  },
+  "languages": {
+    "french": "French (native)",
+    "english": "English (fluent)",
+    "spanish": "Spanish (intermediate)"
+  },
+  "interests": {
+    "tech": "Emerging technologies & Open Source",
+    "writing": "Technical article writing",
+    "mentoring": "Mentoring junior developers"
+  }
+}

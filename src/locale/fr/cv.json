@@ -1,0 +1,97 @@
+{
+  "header": {
+    "name": "James ABIB",
+    "title": "Développeur Fullstack | Java & TypeScript & Rust",
+    "description": "Ingénieur logiciel axé sur l'architecture, passionné par le code propre et les systèmes robustes.",
+    "experience": "{{years}}+ ans d'expérience à l'INSEE dans la construction et la maintenance de systèmes critiques, et livraison de bout en bout d'un projet client réel (Upstra) utilisant microservices/cloud.",
+    "vision": "J'apporte une vision moderne (Rust, cloud, CI/CD), un fort esprit d'équipe et la capacité de livrer des produits de haute qualité, rapidement."
+  },
+  "sections": {
+    "experience": "Expérience Professionnelle",
+    "education": "Formation",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "languages": "Langues",
+    "interests": "Centres d'intérêt"
+  },
+  "experience": {
+    "upstra": {
+      "role": "Développeur Fullstack",
+      "company": "Eurialys – Projet Upstra (Alternative GLPI Laboratoires)",
+      "period": "Mars 2025 – Juillet 2025",
+      "description": "Conception complète plateforme SaaS gestion infrastructure laboratoires:<br>• Architecture DDD/Hexagonal avec NestJS, intégration UPS/iLO/VMware ESXi<br>• Frontend Vue 3 + Tailwind CSS, orchestration Docker/Kubernetes<br>• API REST modulaire, documentation technique, démo client validée"
+    },
+    "insee": {
+      "role": "Développeur Fullstack(alternance)",
+      "company": "INSEE - Institut National de la Statistique",
+      "period": "Sep 2022 – Août 2025 (3 ans)",
+      "description": "Migration et modernisation systèmes critiques gouvernementaux:<br>• Expert migration Talend vers Spring Batch 5.1 (Java 11→21)<br>• Développement APIs Spring Boot 3 + interfaces React-DSFR<br>• Scrum Master : animation cérémonies, coordination équipes, qualité livrables<br>• Force de proposition architecture logicielle, systèmes haute disponibilité"
+    }
+  },
+  "education": {
+    "msc": {
+      "degree": "Expert en Ingénierie du Développement et en Architecture Logicielle",
+      "school": "ESGI Paris - Option Architecture des Logiciels",
+      "period": "2023-2025",
+      "description": "Mastère (Niveau Bac +5) - Spécialisation en architecture logicielle"
+    },
+    "bsc": {
+      "degree": "Chef de Projet Logiciel et Réseau",
+      "school": "ESGI Paris - Option Architecture des Logiciels",
+      "period": "2022-2023",
+      "description": "Bachelor (Niveau Bac +3) - Architecture logicielle"
+    },
+    "bts": {
+      "degree": "BTS Services Informatiques aux Organisations SLAM",
+      "school": "Diplômé en 2022",
+      "period": "2020-2022",
+      "description": "Résultat : 15.34/20"
+    }
+  },
+  "skills": {
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "devops": "DevOps & Outils",
+    "database": "Base de données"
+  },
+  "projects": {
+    "upstra": {
+      "name": "Upstra - Alternative GLPI pour Laboratoires",
+      "description": "SaaS B2B complet : gestion infrastructure laboratoires avec intégration UPS/iLO/VMware ESXi. Architecture DDD/Hexagonal NestJS, frontend Vue 3, orchestration Docker/Kubernetes. Projet client réel validé.",
+      "link": "https://upstra.jabib.dev",
+      "tech": "NestJS, Vue 3, Docker, PostgreSQL, Redis, UPS/iLO APIs"
+    },
+    "codeValley": {
+      "name": "Code Valley - Réseau Social Développeurs",
+      "description": "Plateforme type GitHub avec partage et exécution de code sécurisée. Architecture microservices, authentification JWT, isolation containers, interfaces web/mobile responsive.",
+      "link": "https://github.com/CodeValleyy",
+      "tech": "Microservices, Docker, JWT, Mobile-first"
+    },
+    "frakt": {
+      "name": "Générateur de Fractale (frakt)",
+      "description": "Générateur de fractales performant utilisant des formules mathématiques complexes (Julia, Mandelbrot, Newton-Raphson). Intégration continue et documentation complète.",
+      "link": "github.com/jabibamman/frakt"
+    },
+    "greenItForward": {
+      "name": "GreenItForward",
+      "description": "Plateforme de crowdfunding dédiée aux associations environnementales. Permet le financement participatif de projets écologiques avec suivi des contributions et des impacts.",
+      "link": "github.com/greenitforward"
+    },
+    "vinstro": {
+      "name": "Vinstro - SaaS Multi-tenant Bars à Vin",
+      "description": "Plateforme SaaS gestion stock bars à vin : OCR factures automatisé, abonnements Stripe (FREE/STARTER/PRO/ELITE), architecture multi-tenant. Stack moderne Angular/NestJS.",
+      "link": "https://vinstro.jabib.dev",
+      "tech": "Angular 18, NestJS, Stripe, OCR, Multi-tenant Architecture"
+    }
+  },
+  "languages": {
+    "french": "Français (natif)",
+    "english": "Anglais (courant)",
+    "spanish": "Espagnol (intermédiaire)"
+  },
+  "interests": {
+    "tech": "Technologies émergentes & Open Source",
+    "writing": "Rédaction d'articles techniques",
+    "mentoring": "Mentorat de développeurs juniors"
+  }
+}

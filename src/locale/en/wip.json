@@ -1,0 +1,16 @@
+{
+  "title": "Work in Progress",
+  "description": "Sorry, this section is still under construction.",
+  "features": "New features",
+  "and": "and",
+  "tools": "cool tools",
+  "comingSoon": "coming soon!",
+  "returnHome": "← Back to home",
+  "messages": {
+    "building": "Building the future... Please wait.",
+    "hello": "Hello friend.",
+    "deploying": "Deploying creativity.",
+    "injecting": "Injecting TypeScript...",
+    "crafting": "Crafting the fullstack workspace."
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "hero": {
+    "title": {
+      "developer": "Developer",
+      "fullstack": "Fullstack"
+    },
+    "subtitle": "James ABIB – Software architect passionate about building robust and innovative solutions",
+    "specialization": "Expert in clean code, software quality and DDD/hexagonal architecture, with strong experience in creating and migrating scalable front-end and back-end applications. Based in Paris region.",
+    "techStack": {
+      "java": "Java",
+      "typescript": "TypeScript",
+      "rust": "Rust",
+      "angular": "Angular",
+      "cloud": "Cloud"
+    }
+  },
+  "services": {
+    "badge": "Premium services",
+    "title": "How can I help you?",
+    "subtitle": "Tailored solutions to turn your ideas into reality",
+    "fullstack": {
+      "title": "Full-Stack Java/Angular Development",
+      "description": "Enterprise web applications with Spring Boot 3, Angular 18, DDD architecture and hexagonal patterns. Expert in Talend to Spring Batch 5.1 migration."
+    },
+    "cloud": {
+      "title": "Cloud Architecture & Microservices",
+      "description": "Scalable Docker/Kubernetes solutions, NestJS, PostgreSQL/Redis and FinOps TCO analysis."
+    },
+    "consulting": {
+      "title": "Software Architecture Consulting",
+      "description": "Legacy modernization support, Clean Architecture, Domain-Driven Design. Agile development team training."
+    },
+    "cta": "Got a project in mind? Let's discuss it!"
+  },
+  "process": {
+    "title": "A process that works",
+    "subtitle": "From idea to delivery, I support you every step of the way",
+    "step1": {
+      "title": "Initial discussion",
+      "description": "We discuss your needs, goals, and constraints to fully understand your project"
+    },
+    "step2": {
+      "title": "Technical proposal",
+      "description": "I suggest a tailored solution with a detailed quote and delivery schedule"
+    },
+    "step3": {
+      "title": "Iterative development",
+      "description": "Short sprints with regular deliverables and feedback points to adjust as needed"
+    },
+    "step4": {
+      "title": "Delivery & Support",
+      "description": "Production deployment, training if needed, and ongoing support to ensure success"
+    },
+    "stats": {
+      "ontime": "Projects delivered on time",
+      "experience": "Years of experience",
+      "satisfaction": "Satisfaction guaranteed"
+    }
+  },
+  "about": {
+    "title": "About me",
+    "who": {
+      "title": "Who am I?",
+      "intro": "Fullstack software architect passionate about building robust and innovative solutions. Graduated with a Master's in Software Architecture from ESGI Paris, I specialize in modernizing legacy systems.",
+      "expertise1": "Java/TypeScript/Angular",
+      "expertise2": "DDD/Hexagonal Architecture",
+      "expertise3": "Freelance Consultant"
+    },
+    "journey": {
+      "title": "My journey",
+      "current": {
+        "title": "Current Education (2023-2025)",
+        "description": "Master's in Software Architecture at ESGI Paris, specializing in complex system design and modern architectural patterns."
+      },
+      "past": {
+        "title": "INSEE Experience (2022-2025)",
+        "description": "3-year apprenticeship: Talend to Spring Batch 5.1 migration, legacy application modernization, React-DSFR development, Scrum Master role."
+      },
+      "next": {
+        "title": "Next Mission (Sept 2025)",
+        "description": "Fullstack Java/Angular Developer at Casden Banque Populaire via Extia, to continue developing my expertise in banking environments."
+      }
+    },
+    "philosophy": {
+      "title": "My philosophy",
+      "quote": "\"telling things as they are\"",
+      "approach": "I prioritize transparency and efficiency in all my projects.",
+      "value1": "Clean Code & Quality",
+      "value2": "Scalable Architecture",
+      "value3": "Team Mentoring",
+      "value4": "Technical Innovation"
+    },
+    "tech": {
+      "title": "Mastered technologies",
+      "java": "Robust backend",
+      "typescript": "Modern frontend",
+      "rust": "Performance",
+      "cloud": "Scalable architecture"
+    }
+  },
+  "contact": {
+    "title": "Ready to start your project?",
+    "subtitle": "Let's discuss your ideas and turn them into reality",
+    "call": {
+      "title": "Schedule a call",
+      "description": "30 minutes to talk about your project and see how I can help"
+    },
+    "email": {
+      "title": "Send an email",
+      "description": "For detailed requests or specific questions"
+    },
+    "social": "Or find me on",
+    "cta": {
+      "title": "Don't let your ideas just stay ideas",
+      "subtitle": "Let's build something exceptional together",
+      "button": "Start now"
+    }
+  }
+}
