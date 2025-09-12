@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "public": true,
+  "name": "jabib-portfolio",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api/serverless"
+    }
+  ],
+  "functions": {
+    "api/serverless.js": {
+      "includeFiles": "dist/**"
+    }
+  }
+}

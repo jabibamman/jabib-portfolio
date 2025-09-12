@@ -421,4 +421,10 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+CL*UDE.md
+.cl*de/
+
+# Personal files
+perso/
+
 # End of https://www.toptal.com/developers/gitignore/api/angular,node,macos,windows,linux,openframeworks,visualstudiocode,intellij+all

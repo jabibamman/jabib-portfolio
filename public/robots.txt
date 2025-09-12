@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jabib.dev/sitemap.xml
+
+Crawl-delay: 1
+
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /admin/
+Disallow: /private/
+
+Allow: /assets/
+Allow: /favicon.ico
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.webp$
+Allow: /*.svg$
