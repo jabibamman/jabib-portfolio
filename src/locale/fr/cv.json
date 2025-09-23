@@ -64,7 +64,7 @@
     "codeValley": {
       "name": "Code Valley - Réseau Social Développeurs",
       "description": "Plateforme type GitHub avec partage et exécution de code sécurisée. Architecture microservices, authentification JWT, isolation containers, interfaces web/mobile responsive.",
-      "link": "https://github.com/CodeValleyy",
+      "link": "github.com/CodeValleyy",
       "tech": "Microservices, Docker, JWT, Mobile-first"
     },
     "frakt": {
@@ -75,12 +75,12 @@
     "greenItForward": {
       "name": "GreenItForward",
       "description": "Plateforme de crowdfunding dédiée aux associations environnementales. Permet le financement participatif de projets écologiques avec suivi des contributions et des impacts.",
-      "link": "github.com/greenitforward"
+      "link": "github.com/GreenItForward"
     },
     "vinstro": {
       "name": "Vinstro - SaaS Multi-tenant Bars à Vin",
       "description": "Plateforme SaaS gestion stock bars à vin : OCR factures automatisé, abonnements Stripe (FREE/STARTER/PRO/ELITE), architecture multi-tenant. Stack moderne Angular/NestJS.",
-      "link": "https://vinstro.jabib.dev",
+      "link": "vinstro.jabib.dev",
       "tech": "Angular 18, NestJS, Stripe, OCR, Multi-tenant Architecture"
     }
   },

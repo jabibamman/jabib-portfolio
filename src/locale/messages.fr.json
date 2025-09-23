@@ -163,7 +163,7 @@
       "insee": {
         "role": "Développeur Fullstack (alternance)",
         "company": "INSEE - Institut National de la Statistique",
-        "period": "Sep 2022 – Août 2025 (3 ans)",
+        "period": "Sep 2022 – Sep 2025 (3 ans)",
         "description": "Migration et modernisation systèmes critiques gouvernementaux:<br>• Expert migration Talend vers Spring Batch 5.1 (Java 11→21)<br>• Développement APIs Spring Boot 3 + interfaces React-DSFR<br>• Scrum Master : animation cérémonies, coordination équipes, qualité livrables<br>• Force de proposition architecture logicielle, systèmes haute disponibilité"
       }
     },
@@ -197,13 +197,13 @@
       "upstra": {
         "name": "Upstra - Alternative GLPI pour Laboratoires",
         "description": "SaaS B2B complet : gestion infrastructure laboratoires avec intégration UPS/iLO/VMware ESXi. Architecture DDD/Hexagonal NestJS, frontend Vue 3, orchestration Docker/Kubernetes. Projet client réel validé.",
-        "link": "https://upstra.jabib.dev",
+        "link": "upstra.jabib.dev",
         "tech": "NestJS, Vue 3, Docker, PostgreSQL, Redis, UPS/iLO APIs"
       },
       "codeValley": {
         "name": "Code Valley - Réseau Social Développeurs",
         "description": "Plateforme type GitHub avec partage et exécution de code sécurisée. Architecture microservices, authentification JWT, isolation containers, interfaces web/mobile responsive.",
-        "link": "https://github.com/CodeValleyy",
+        "link": "github.com/CodeValleyy",
         "tech": "Microservices, Docker, JWT, Mobile-first"
       },
       "frakt": {
@@ -214,12 +214,12 @@
       "greenItForward": {
         "name": "GreenItForward",
         "description": "Plateforme de crowdfunding dédiée aux associations environnementales. Permet le financement participatif de projets écologiques avec suivi des contributions et des impacts.",
-        "link": "github.com/greenitforward"
+        "link": "github.com/GreenItForward"
       },
       "vinstro": {
         "name": "Vinstro - SaaS Multi-tenant Bars à Vin",
         "description": "Plateforme SaaS gestion stock bars à vin : OCR factures automatisé, abonnements Stripe (FREE/STARTER/PRO/ELITE), architecture multi-tenant. Stack moderne Angular/NestJS.",
-        "link": "https://vinstro.jabib.dev",
+        "link": "vinstro.jabib.dev",
         "tech": "Angular 18, NestJS, Stripe, OCR, Multi-tenant Architecture"
       }
     },

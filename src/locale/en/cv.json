@@ -24,7 +24,7 @@
     "insee": {
       "role": "Fullstack Developer (apprenticeship)",
       "company": "INSEE - National Institute of Statistics",
-      "period": "Sep 2022 – Aug 2025 (3 years)",
+      "period": "Sep 2022 – Sep 2025 (3 years)",
       "description": "Migration and modernization of critical government systems:<br>• Expert in Talend to Spring Batch 5.1 migration (Java 11→21)<br>• Spring Boot 3 API development + React-DSFR interfaces<br>• Scrum Master: ceremony facilitation, team coordination, deliverable quality<br>• Software architecture proposals, high-availability systems"
     }
   },
@@ -64,7 +64,7 @@
     "codeValley": {
       "name": "Code Valley - Developer Social Network",
       "description": "GitHub-like platform with secure code sharing and execution. Microservices architecture, JWT authentication, container isolation, responsive web/mobile interfaces.",
-      "link": "https://github.com/CodeValleyy",
+      "link": "github.com/CodeValleyy",
       "tech": "Microservices, Docker, JWT, Mobile-first"
     },
     "frakt": {
@@ -75,12 +75,12 @@
     "greenItForward": {
       "name": "GreenItForward",
       "description": "Crowdfunding platform dedicated to environmental associations. Enables participatory funding of ecological projects with contribution and impact tracking.",
-      "link": "github.com/greenitforward"
+      "link": "github.com/GreenItForward"
     },
     "vinstro": {
       "name": "Vinstro - Multi-tenant SaaS Wine Bars",
       "description": "SaaS wine bar stock management platform: automated OCR invoicing, Stripe subscriptions (FREE/STARTER/PRO/ELITE), multi-tenant architecture. Modern Angular/NestJS stack.",
-      "link": "https://vinstro.jabib.dev",
+      "link": "vinstro.jabib.dev",
       "tech": "Angular 18, NestJS, Stripe, OCR, Multi-tenant Architecture"
     }
   },

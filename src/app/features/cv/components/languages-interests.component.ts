@@ -38,7 +38,7 @@ import { TranslatePipe } from '../../../core/pipes/translate.pipe';
         <a href="mailto:james.abibamman@gmail.com" class="text-violet-300 underline"
           >james.abibamman&#64;gmail.com</a
         >
-        · +33 7 81 89 39 06 · Paris ·
+       · Paris ·
         <a href="https://github.com/jabibamman" target="_blank" class="text-violet-300 underline"
           >github.com/jabibamman</a
         >
