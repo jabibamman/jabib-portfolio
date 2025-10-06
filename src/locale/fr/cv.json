@@ -15,6 +15,12 @@
     "interests": "Centres d'intérêt"
   },
   "experience": {
+    "casden": {
+      "role": "Développeur Fullstack",
+      "company": "CASDEN Banque Populaire",
+      "period": "Sep 2025 – Aujourd'hui",
+      "description": "Refonte application gestion crédit sociétaire et conseiller :<br>• Migration Soap → API Rest, optimisation performance<br>• Backend Java Spring Boot, API REST sécurisée<br>• Tests unitaires/intégration, documentation technique"
+    },
     "upstra": {
       "role": "Développeur Fullstack",
       "company": "Eurialys – Projet Upstra (Alternative GLPI Laboratoires)",

@@ -16,6 +16,13 @@ import { TranslatePipe } from '../../../core/pipes/translate.pipe';
       </div>
       <div class="flex flex-col gap-6">
         <app-experience-card
+          role="{{ 'cv.experience.casden.role' | translate | async }}"
+          company="{{ 'cv.experience.casden.company' | translate | async }}"
+          period="{{ 'cv.experience.casden.period' | translate | async }}"
+          description="{{ 'cv.experience.casden.description' | translate | async }}"
+          [tags]="['Spring Boot 2', 'Vue 2', 'Kubernetes', 'Ansible', 'TDD']"
+        ></app-experience-card>
+        <app-experience-card
           role="{{ 'cv.experience.upstra.role' | translate | async }}"
           company="{{ 'cv.experience.upstra.company' | translate | async }}"
           period="{{ 'cv.experience.upstra.period' | translate | async }}"
@@ -27,7 +34,7 @@ import { TranslatePipe } from '../../../core/pipes/translate.pipe';
           company="{{ 'cv.experience.insee.company' | translate | async }}"
           period="{{ 'cv.experience.insee.period' | translate | async }}"
           description="{{ 'cv.experience.insee.description' | translate | async }}"
-          [tags]="['Java', 'Spring Boot', 'React', 'Spring Batch', 'GCP']"
+          [tags]="['Java', 'Spring Boot 3', 'React', 'Spring Batch', 'GCP']"
         ></app-experience-card>
       </div>
     </div>
