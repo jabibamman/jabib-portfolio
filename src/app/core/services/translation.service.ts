@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { isPlatformBrowser } from '@angular/common';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 import { TranslationLoaderService } from './translation-loader.service';
 
 @Injectable({
@@ -17,17 +19,50 @@ export class TranslationService {
 
   constructor(
     private http: HttpClient,
+    private router: Router,
     @Inject(LOCALE_ID) locale: string,
     @Inject(PLATFORM_ID) private platformId: Object,
     private translationLoader: TranslationLoaderService
   ) {
+    const urlLocale = this.getLocaleFromUrl();
+
     if (isPlatformBrowser(this.platformId) && typeof localStorage !== 'undefined') {
       const savedLang = localStorage.getItem('preferredLanguage');
-      this.currentLocale = savedLang || locale || 'fr';
+      this.currentLocale = urlLocale || savedLang || locale || 'fr';
     } else {
-      this.currentLocale = locale || 'fr';
+      this.currentLocale = urlLocale || locale || 'fr';
     }
     this.currentLocaleSubject.next(this.currentLocale);
+
+    this.setupRouteListener();
+  }
+
+  private setupRouteListener(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      this.router.events
+        .pipe(filter(event => event instanceof NavigationEnd))
+        .subscribe((event: NavigationEnd) => {
+          const newLocale = this.getLocaleFromUrl();
+          if (newLocale && newLocale !== this.currentLocale) {
+            this.currentLocale = newLocale;
+            this.currentLocaleSubject.next(newLocale);
+            this.loadTranslations();
+
+            if (typeof localStorage !== 'undefined') {
+              localStorage.setItem('preferredLanguage', newLocale);
+            }
+          }
+        });
+    }
+  }
+
+  private getLocaleFromUrl(): string | null {
+    if (isPlatformBrowser(this.platformId)) {
+      const path = window.location.pathname;
+      if (path.startsWith('/fr')) return 'fr';
+      if (path.startsWith('/en')) return 'en';
+    }
+    return null;
   }
 
   init(): Promise<void> {
