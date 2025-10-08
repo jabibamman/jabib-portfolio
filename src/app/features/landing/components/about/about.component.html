@@ -150,7 +150,7 @@
 
         <div class="pt-6">
           <a
-            routerLink="/cv"
+            [routerLink]="cvLink"
             class="inline-flex items-center gap-2 text-violet-400 hover:text-violet-300 font-semibold transition-colors duration-300"
           >
             {{ 'common.buttons.view_cv' | translate | async }}

@@ -12,6 +12,7 @@ import {
 } from 'lucide-angular';
 import { TranslatePipe } from '../../../../core/pipes/translate.pipe';
 import { LanguageSwitcherComponent } from '../../../../core/components/language-switcher.component';
+import { NavigationService } from '../../../../core/services/navigation.service';
 
 @Component({
   selector: 'app-legal-notice',
@@ -34,11 +35,17 @@ export class LegalNoticeComponent {
   readonly Server = Server;
   readonly Copyright = Copyright;
 
+  constructor(public navigation: NavigationService) {}
+
   get currentDate(): string {
     return new Date().toLocaleDateString('fr-FR', {
       year: 'numeric',
       month: 'long',
       day: 'numeric',
     });
+  }
+
+  get homeLink(): string {
+    return this.navigation.getLocalizedPath('');
   }
 }
