@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://jabib.dev/en/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jabib.dev/fr/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://jabib.dev/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jabib.dev/" />
+    <lastmod>2025-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://jabib.dev/en/portfolio</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jabib.dev/fr/portfolio" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://jabib.dev/en/portfolio" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jabib.dev/" />
+    <lastmod>2025-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jabib.dev/en/cv</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jabib.dev/fr/cv" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://jabib.dev/en/cv" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jabib.dev/" />
+    <lastmod>2025-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jabib.dev/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jabib.dev/fr/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://jabib.dev/en/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jabib.dev/" />
+    <lastmod>2025-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>

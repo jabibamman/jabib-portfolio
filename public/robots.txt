@@ -1,7 +1,9 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jabib.dev/sitemap.xml
+Sitemap: https://jabib.dev/sitemap_index.xml
+Sitemap: https://jabib.dev/sitemap-fr.xml
+Sitemap: https://jabib.dev/sitemap-en.xml
 
 Crawl-delay: 1
 
