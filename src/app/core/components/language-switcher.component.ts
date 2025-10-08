@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslationService } from '../services/translation.service';
+import { LocaleRoutingService } from '../services/locale-routing.service';
 
 @Component({
   selector: 'app-language-switcher',
@@ -40,17 +40,17 @@ import { TranslationService } from '../services/translation.service';
 export class LanguageSwitcherComponent {
   isLoading = false;
 
-  constructor(private translationService: TranslationService) {}
+  constructor(private localeRoutingService: LocaleRoutingService) {}
 
   get currentLang(): string {
-    return this.translationService.currentLang;
+    return this.localeRoutingService.getCurrentLocale();
   }
 
   switchLanguage(lang: string): void {
     if (lang !== this.currentLang) {
       this.isLoading = true;
-      this.translationService.setLanguage(lang);
-      setTimeout(() => (this.isLoading = false), 500);
+      this.localeRoutingService.switchLocale(lang);
+      setTimeout(() => (this.isLoading = false), 300);
     }
   }
 }
