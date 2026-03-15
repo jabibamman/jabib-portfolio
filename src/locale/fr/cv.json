@@ -3,7 +3,7 @@
     "name": "James ABIB",
     "title": "Développeur Fullstack | Java & TypeScript & Rust",
     "description": "Ingénieur logiciel axé sur l'architecture, passionné par le code propre et les systèmes robustes.",
-    "experience": "{{years}}+ ans d'expérience à l'INSEE dans la construction et la maintenance de systèmes critiques, et livraison de bout en bout d'un projet client réel (Upstra) utilisant microservices/cloud.",
+    "experience": "{{years}}+ ans d'expérience en développement logiciel, actuellement consultant fullstack Java/Vue.js pour CASDEN (BPCE Group), spécialisé architecture DDD/hexagonale, microservices et systèmes critiques.",
     "vision": "J'apporte une vision moderne (Rust, cloud, CI/CD), un fort esprit d'équipe et la capacité de livrer des produits de haute qualité, rapidement."
   },
   "sections": {

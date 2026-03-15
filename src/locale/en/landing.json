@@ -10,7 +10,7 @@
       "java": "Java",
       "typescript": "TypeScript",
       "rust": "Rust",
-      "angular": "Angular",
+      "vue": "Vue.js",
       "cloud": "Cloud"
     }
   },
@@ -19,8 +19,8 @@
     "title": "How can I help you?",
     "subtitle": "Tailored solutions to turn your ideas into reality",
     "fullstack": {
-      "title": "Full-Stack Java/Angular Development",
-      "description": "Enterprise web applications with Spring Boot 3, Angular 18, DDD architecture and hexagonal patterns. Expert in Talend to Spring Batch 5.1 migration."
+      "title": "Full-Stack Java/Vue Development",
+      "description": "Enterprise web applications built with Spring Boot 3 and Vue 3, using DDD and hexagonal architecture patterns. Experienced in migrating Talend pipelines to Spring Batch 5.1."
     },
     "cloud": {
       "title": "Cloud Architecture & Microservices",
@@ -62,23 +62,23 @@
     "who": {
       "title": "Who am I?",
       "intro": "Fullstack software architect passionate about building robust and innovative solutions. Graduated with a Master's in Software Architecture from ESGI Paris, I specialize in modernizing legacy systems.",
-      "expertise1": "Java/TypeScript/Angular",
+      "expertise1": "Java/TypeScript/Vue.js",
       "expertise2": "DDD/Hexagonal Architecture",
       "expertise3": "Freelance Consultant"
     },
     "journey": {
-      "title": "My journey",
+      "title": "My Journey",
       "current": {
-        "title": "Current Education (2023-2025)",
-        "description": "Master's in Software Architecture at ESGI Paris, specializing in complex system design and modern architectural patterns."
+        "title": "Current Mission (Sept 2025 – Present)",
+        "description": "Java/Vue.js Full-Stack Consultant at CASDEN Banque Populaire via Extia, working on the refactoring of a consumer credit application and implementing APIs aligned with BPCE standards."
       },
       "past": {
-        "title": "INSEE Experience (2022-2025)",
-        "description": "3-year apprenticeship: Talend to Spring Batch 5.1 migration, legacy application modernization, React-DSFR development, Scrum Master role."
+        "title": "INSEE Experience (2022–2025)",
+        "description": "3-year apprenticeship: migration from Talend to Spring Batch 5.1, modernization of legacy applications, React-DSFR development, and Scrum Master responsibilities."
       },
-      "next": {
-        "title": "Next Mission (Sept 2025)",
-        "description": "Fullstack Java/Angular Developer at Casden Banque Populaire via Extia, to continue developing my expertise in banking environments."
+      "formation": {
+        "title": "ESGI Education (2022–2025)",
+        "description": "Master’s Degree in Software Architecture (Bac+5 equivalent), specializing in complex systems, Domain-Driven Design, and architectural patterns."
       }
     },
     "philosophy": {

@@ -30,7 +30,7 @@
         "java": "Java",
         "typescript": "TypeScript",
         "rust": "Rust",
-        "angular": "Angular",
+        "vue": "Vue.js",
         "cloud": "Cloud"
       }
     },

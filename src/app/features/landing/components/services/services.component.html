@@ -139,7 +139,7 @@
     <div class="text-center mt-16">
       <p class="text-zinc-400 mb-6">{{ 'landing.services.cta' | translate | async }}</p>
       <button
-        (click)="openCalendly()"
+        (click)="calendly.openPopup()"
         class="group relative px-8 py-4 bg-gradient-to-r from-violet-600 to-pink-600 rounded-xl font-semibold text-white shadow-2xl shadow-violet-500/25 hover:shadow-violet-500/40 transition-all duration-300 hover:scale-105"
       >
         <span class="relative z-10">{{ 'common.buttons.schedule_call' | translate | async }}</span>

@@ -20,7 +20,7 @@ import { TranslatePipe } from '../../../core/pipes/translate.pipe';
           company="{{ 'cv.experience.casden.company' | translate | async }}"
           period="{{ 'cv.experience.casden.period' | translate | async }}"
           description="{{ 'cv.experience.casden.description' | translate | async }}"
-          [tags]="['Spring Boot 2', 'Vue 2', 'Kubernetes', 'Ansible', 'TDD']"
+          [tags]="['Spring Boot 3', 'Java 21', 'Vue 2', 'Kubernetes', 'Ansible', 'TDD']"
         ></app-experience-card>
         <app-experience-card
           role="{{ 'cv.experience.upstra.role' | translate | async }}"
