@@ -197,7 +197,7 @@
       "upstra": {
         "name": "Upstra - Alternative GLPI pour Laboratoires",
         "description": "SaaS B2B complet : gestion infrastructure laboratoires avec intégration UPS/iLO/VMware ESXi. Architecture DDD/Hexagonal NestJS, frontend Vue 3, orchestration Docker/Kubernetes. Projet client réel validé.",
-        "link": "upstra.jabib.dev",
+        "link": "https://github.com/Upstra",
         "tech": "NestJS, Vue 3, Docker, PostgreSQL, Redis, UPS/iLO APIs"
       },
       "codeValley": {

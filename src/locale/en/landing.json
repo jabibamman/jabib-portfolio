@@ -95,8 +95,8 @@
         "date": "2025",
         "description": "B2B SaaS for lab infrastructure management: UPS / iLO / VMware ESXi integration, DDD and hexagonal architecture. NestJS back-end, Vue 3 front-end.",
         "tags": ["NestJS", "Vue 3", "Docker", "PostgreSQL"],
-        "href": "https://upstra.jabib.dev",
-        "linkType": "website"
+        "href": "https://github.com/Upstra",
+        "linkType": "source"
       },
       {
         "name": "Vinstro",
