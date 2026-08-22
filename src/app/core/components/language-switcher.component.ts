@@ -1,7 +1,13 @@
 import { Component, ElementRef, Inject, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { LocaleRoutingService } from '../services/locale-routing.service';
+import { PositionStorageService } from '../services/position-storage.service';
 import { PLATFORM_ID } from '@angular/core';
+
+interface Position {
+  x: number;
+  y: number;
+}
 
 @Component({
   selector: 'app-language-switcher',
@@ -46,14 +52,15 @@ export class LanguageSwitcherComponent implements OnInit, OnDestroy {
   @ViewChild('dragRoot', { static: true }) dragRoot!: ElementRef<HTMLElement>;
 
   isLoading = false;
-  position = { x: 0, y: 0 };
+  position: Position = { x: 0, y: 0 };
   private dragging = false;
-  private offset = { x: 0, y: 0 };
+  private offset: Position = { x: 0, y: 0 };
   private unlisteners: Array<() => void> = [];
   private storageKey = 'lswitcher_pos_v1';
 
   constructor(
     private localeRoutingService: LocaleRoutingService,
+    private positionStorage: PositionStorageService,
     private renderer: Renderer2,
     @Inject(PLATFORM_ID) private platformId: Object,
   ) {}
@@ -62,10 +69,7 @@ export class LanguageSwitcherComponent implements OnInit, OnDestroy {
     if (isPlatformBrowser(this.platformId)) {
       // Default near top-right
       this.position = { x: Math.max(window.innerWidth - 180, 16), y: 16 };
-      try {
-        const saved = localStorage.getItem(this.storageKey);
-        if (saved) this.position = JSON.parse(saved);
-      } catch {}
+      this.position = this.positionStorage.loadPosition(this.storageKey, this.position);
     }
   }
 
@@ -119,9 +123,7 @@ export class LanguageSwitcherComponent implements OnInit, OnDestroy {
   private onPointerUp(): void {
     if (!isPlatformBrowser(this.platformId)) return;
     this.dragging = false;
-    try {
-      localStorage.setItem(this.storageKey, JSON.stringify(this.position));
-    } catch {}
+    this.positionStorage.savePosition(this.storageKey, this.position);
     this.teardownListeners();
   }
 

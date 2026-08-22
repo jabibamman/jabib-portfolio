@@ -322,7 +322,6 @@ dist
 *.o
 [Dd]ebug*/
 [Rr]elease*/
-*.mode*
 *.app/
 *.pyc
 .svn/

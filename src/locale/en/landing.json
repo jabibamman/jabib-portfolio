@@ -1,119 +1,158 @@
 {
   "hero": {
-    "title": {
-      "developer": "Developer",
-      "fullstack": "Fullstack"
-    },
-    "subtitle": "James ABIB – Software architect passionate about building robust and innovative solutions",
-    "specialization": "Expert in clean code, software quality and DDD/hexagonal architecture, with strong experience in creating and migrating scalable front-end and back-end applications. Based in Paris region.",
-    "techStack": {
-      "java": "Java",
-      "typescript": "TypeScript",
-      "rust": "Rust",
-      "angular": "Angular",
-      "cloud": "Cloud"
-    }
-  },
-  "services": {
-    "badge": "Premium services",
-    "title": "How can I help you?",
-    "subtitle": "Tailored solutions to turn your ideas into reality",
-    "fullstack": {
-      "title": "Full-Stack Java/Angular Development",
-      "description": "Enterprise web applications with Spring Boot 3, Angular 18, DDD architecture and hexagonal patterns. Expert in Talend to Spring Batch 5.1 migration."
-    },
-    "cloud": {
-      "title": "Cloud Architecture & Microservices",
-      "description": "Scalable Docker/Kubernetes solutions, NestJS, PostgreSQL/Redis and FinOps TCO analysis."
-    },
-    "consulting": {
-      "title": "Software Architecture Consulting",
-      "description": "Legacy modernization support, Clean Architecture, Domain-Driven Design. Agile development team training."
-    },
-    "cta": "Got a project in mind? Let's discuss it!"
-  },
-  "process": {
-    "title": "A process that works",
-    "subtitle": "From idea to delivery, I support you every step of the way",
-    "step1": {
-      "title": "Initial discussion",
-      "description": "We discuss your needs, goals, and constraints to fully understand your project"
-    },
-    "step2": {
-      "title": "Technical proposal",
-      "description": "I suggest a tailored solution with a detailed quote and delivery schedule"
-    },
-    "step3": {
-      "title": "Iterative development",
-      "description": "Short sprints with regular deliverables and feedback points to adjust as needed"
-    },
-    "step4": {
-      "title": "Delivery & Support",
-      "description": "Production deployment, training if needed, and ongoing support to ensure success"
-    },
-    "stats": {
-      "ontime": "Projects delivered on time",
-      "experience": "Years of experience",
-      "satisfaction": "Satisfaction guaranteed"
-    }
+    "greeting": "Hi, I'm James 👋",
+    "tagline": "Backend Engineer, Kotlin / Java on critical banking systems. Paris or remote."
   },
   "about": {
-    "title": "About me",
-    "who": {
-      "title": "Who am I?",
-      "intro": "Fullstack software architect passionate about building robust and innovative solutions. Graduated with a Master's in Software Architecture from ESGI Paris, I specialize in modernizing legacy systems.",
-      "expertise1": "Java/TypeScript/Angular",
-      "expertise2": "DDD/Hexagonal Architecture",
-      "expertise3": "Freelance Consultant"
-    },
-    "journey": {
-      "title": "My journey",
-      "current": {
-        "title": "Current Education (2023-2025)",
-        "description": "Master's in Software Architecture at ESGI Paris, specializing in complex system design and modern architectural patterns."
+    "title": "About",
+    "text": "I have been doing backend work in banking since 2022: legacy you modernise without breaking anything, and rewrites that have to ship. My method does not change, understand the domain first, secure it with tests, rewrite after that. DDD and hexagonal architecture follow from it, they are not boxes ticked at kickoff. I ship my own interfaces too, because a feature that stops at the API is not finished."
+  },
+  "experience": {
+    "title": "Work Experience",
+    "skillsLabel": "Skills:",
+    "jobs": [
+      {
+        "id": "extia",
+        "org": "Extia",
+        "initial": "E",
+        "logo": "extia",
+        "role": "Backend Engineer, Kotlin · on assignment at a Groupe BPCE bank",
+        "dates": "Sep 2025 -",
+        "details": "-Technical ownership of a credit underwriting platform in production: incident analysis, production support, build & run.\n-Rewrote back-end APIs in Kotlin / Spring Boot 3 for the sales IS overhaul, compliant with group API standards.\n-Contributed to the target architecture: ADRs, hexagonal architecture, clean code.\n-Migrated and integrated existing data flows (Apache Camel, Talend) and maintained the Vue.js front-end on the same scope.\n-Unit and integration tests, peer code reviews, technical documentation and knowledge sharing.",
+        "skills": [
+          "Kotlin",
+          "Java 21",
+          "Spring Boot 3",
+          "Vue 2/3",
+          "Elasticsearch",
+          "Camunda",
+          "PostgreSQL",
+          "Hexagonal",
+          "GitLab CI",
+          "Talend"
+        ]
       },
-      "past": {
-        "title": "INSEE Experience (2022-2025)",
-        "description": "3-year apprenticeship: Talend to Spring Batch 5.1 migration, legacy application modernization, React-DSFR development, Scrum Master role."
+      {
+        "id": "eurialys",
+        "org": "Eurialys - Upstra",
+        "initial": "E",
+        "logo": "eurialys",
+        "role": "Fullstack Engineer · alongside the INSEE apprenticeship",
+        "dates": "Mar 2025 - Jul 2025",
+        "details": "-Designed a NestJS back-end structured with DDD and hexagonal architecture for a lab infrastructure management SaaS.\n-Built Python microservices orchestrating UPS and iLO equipment.\n-Shipped the Vue 3 front-end and deployment with Docker, Docker Compose and Kubernetes.\n-Led a team of 2 developers: architecture documents, pair programming, code reviews.",
+        "skills": ["NestJS", "TypeScript", "Python", "Vue 3", "Docker", "Kubernetes", "DDD"]
       },
-      "next": {
-        "title": "Next Mission (Sept 2025)",
-        "description": "Fullstack Java/Angular Developer at Casden Banque Populaire via Extia, to continue developing my expertise in banking environments."
+      {
+        "id": "insee",
+        "org": "INSEE",
+        "initial": "I",
+        "logo": "insee",
+        "role": "Fullstack Engineer (apprenticeship)",
+        "dates": "Sep 2022 - Aug 2025",
+        "details": "-Migrated legacy Talend batch chains to Java 21 / Spring Batch: 12 jobs rewritten, -70% execution time, stronger maintainability, reduced licensing costs.\n-Daily releases and CI/CD supervision: application packaging and deployments through GitLab CI coupled with Jenkins.\n-JUnit unit tests written test-first on the migration, SonarQube analysis, peer code reviews.\n-Ran retrospectives and refinement; application referent for new joiners: onboarding, mentoring, technical support.",
+        "skills": [
+          "Java 11/17/21",
+          "Spring Boot 3",
+          "Spring Batch",
+          "React-DSFR",
+          "Talend",
+          "PostgreSQL",
+          "MariaDB",
+          "GitLab CI",
+          "SonarQube",
+          "Docker"
+        ]
       }
-    },
-    "philosophy": {
-      "title": "My philosophy",
-      "quote": "\"telling things as they are\"",
-      "approach": "I prioritize transparency and efficiency in all my projects.",
-      "value1": "Clean Code & Quality",
-      "value2": "Scalable Architecture",
-      "value3": "Team Mentoring",
-      "value4": "Technical Innovation"
-    },
-    "tech": {
-      "title": "Mastered technologies",
-      "java": "Robust backend",
-      "typescript": "Modern frontend",
-      "rust": "Performance",
-      "cloud": "Scalable architecture"
-    }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "entries": [
+      {
+        "org": "ESGI Paris",
+        "degree": "MSc Software Architecture",
+        "dates": "2023 - 2025",
+        "logo": "esgi"
+      },
+      {
+        "org": "ESGI Paris",
+        "degree": "BSc Software Architecture",
+        "dates": "2022 - 2023",
+        "logo": "esgi"
+      }
+    ]
+  },
+  "projects": {
+    "badge": "My Projects",
+    "title": "Check out my latest work",
+    "subtitle": "Here are a few of my favorites.",
+    "websiteLabel": "Website",
+    "sourceLabel": "Source",
+    "wipLabel": "In progress",
+    "items": [
+      {
+        "name": "Upstra",
+        "date": "2025",
+        "description": "B2B SaaS for lab infrastructure management: UPS / iLO / VMware ESXi integration, DDD and hexagonal architecture. NestJS back-end, Vue 3 front-end.",
+        "tags": ["NestJS", "Vue 3", "Docker", "PostgreSQL"],
+        "href": "https://upstra.jabib.dev",
+        "linkType": "website"
+      },
+      {
+        "name": "Vinstro",
+        "date": "2025",
+        "description": "Multi-tenant SaaS for wine bars, currently in development: invoice OCR, Stripe subscriptions, stock management. The API is a work in progress.",
+        "tags": ["Angular 18", "NestJS", "Stripe", "OCR"],
+        "href": "https://vinstro.jabib.dev",
+        "linkType": "website",
+        "inProgress": true
+      },
+      {
+        "name": "Code Valley",
+        "date": "2024",
+        "description": "Developer social network with container-isolated code execution. Microservices architecture, JWT authentication.",
+        "tags": ["Kotlin", "Rust", "Microservices", "Docker"],
+        "href": "https://github.com/CodeValleyy",
+        "linkType": "source"
+      },
+      {
+        "name": "frakt",
+        "date": "2024",
+        "description": "High-performance fractal generator in Rust: Julia, Mandelbrot, Newton-Raphson, distributed computation.",
+        "tags": ["Rust", "GitHub Actions", "Rustdoc"],
+        "href": "https://github.com/jabibamman/frakt",
+        "linkType": "source"
+      }
+    ]
+  },
+  "writing": {
+    "badge": "Writing",
+    "title": "Notes from the field",
+    "subtitle": "Most of my banking work is under NDA, so I write about it instead.",
+    "draftLabel": "draft",
+    "articles": [
+      {
+        "title": "Splitting a Talend batch chain to rewrite it in Spring Batch without stopping production",
+        "excerpt": "Isolating the business functions of a legacy job, covering them with tests, then switching over with no downtime window."
+      },
+      {
+        "title": "What hexagonal architecture actually changes when banking rules move every quarter",
+        "excerpt": "The real cost of ports and adapters, measured on credit rules that shift with every regulatory release."
+      }
+    ]
   },
   "contact": {
-    "title": "Ready to start your project?",
-    "subtitle": "Let's discuss your ideas and turn them into reality",
-    "call": {
-      "title": "Schedule a call",
-      "description": "30 minutes to talk about your project and see how I can help"
-    },
-    "email": {
-      "title": "Send an email",
-      "description": "For detailed requests or specific questions"
-    },
-    "social": "Or find me on",
-    "cta": {
-      "title": "Don't let your ideas just stay ideas",
-      "subtitle": "Let's build something exceptional together",
-      "button": "Start now"
-    }
+    "badge": "Contact",
+    "title": "Get in Touch",
+    "intro": "An opportunity or a technical question? Just shoot me an email at",
+    "or": "or a dm on",
+    "outro": "and I'll respond whenever I can."
+  },
+  "dock": {
+    "home": "Home",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "email": "Email",
+    "theme": "Toggle theme"
   }
 }

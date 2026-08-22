@@ -1,5 +1,29 @@
 @import "tailwindcss";
 
+:root {
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+  --muted-fg: #737373;
+  --border: #e5e5e5;
+  --secondary: #f5f5f5;
+  --link: #3b82f6;
+}
+
+[data-theme="dark"] {
+  --background: #0a0a0a;
+  --foreground: #fafafa;
+  --muted-fg: #a3a3a3;
+  --border: #262626;
+  --secondary: #262626;
+  --link: #60a5fa;
+}
+
 body {
-  @apply bg-zinc-950;
+  margin: 0;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
 }

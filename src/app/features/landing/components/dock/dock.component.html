@@ -1,0 +1,54 @@
+<div class="fixed inset-x-0 bottom-0 z-30 mx-auto mb-4 flex justify-center pointer-events-none">
+  <div
+    class="pointer-events-auto flex items-center gap-0.5 min-h-14 px-1 py-2 rounded-full bg-[var(--background)] border border-[var(--border)] shadow-lg"
+  >
+    <a
+      href="#"
+      (click)="scrollToTop($event)"
+      [title]="'landing.dock.home' | translate | async"
+      class="flex items-center justify-center w-10 h-10 rounded-full text-[var(--foreground)] transition-colors duration-150 hover:bg-[var(--secondary)]"
+    >
+      <lucide-icon name="home" [size]="16"></lucide-icon>
+    </a>
+
+    <span class="w-px h-8 bg-[var(--border)]"></span>
+
+    <a
+      href="https://github.com/jabibamman"
+      target="_blank"
+      rel="noopener noreferrer"
+      [title]="'landing.dock.github' | translate | async"
+      class="flex items-center justify-center w-10 h-10 rounded-full text-[var(--foreground)] transition-colors duration-150 hover:bg-[var(--secondary)]"
+    >
+      <lucide-icon name="github" [size]="16"></lucide-icon>
+    </a>
+    <a
+      href="https://linkedin.com/in/jamesabib"
+      target="_blank"
+      rel="noopener noreferrer"
+      [title]="'landing.dock.linkedin' | translate | async"
+      class="flex items-center justify-center w-10 h-10 rounded-full text-[var(--foreground)] transition-colors duration-150 hover:bg-[var(--secondary)]"
+    >
+      <lucide-icon name="linkedin" [size]="15"></lucide-icon>
+    </a>
+    <a
+      href="mailto:james.abibamman@gmail.com"
+      [title]="'landing.dock.email' | translate | async"
+      class="flex items-center justify-center w-10 h-10 rounded-full text-[var(--foreground)] transition-colors duration-150 hover:bg-[var(--secondary)]"
+    >
+      <lucide-icon name="mail" [size]="16"></lucide-icon>
+    </a>
+
+    <span class="w-px h-8 bg-[var(--border)]"></span>
+
+    <button
+      type="button"
+      (click)="toggleTheme()"
+      [title]="'landing.dock.theme' | translate | async"
+      class="flex items-center justify-center w-10 h-10 rounded-full bg-transparent border-none p-0 cursor-pointer text-[var(--foreground)] transition-colors duration-150 hover:bg-[var(--secondary)]"
+    >
+      <lucide-icon *ngIf="(theme.theme$ | async) === 'dark'" name="sun" [size]="17"></lucide-icon>
+      <lucide-icon *ngIf="(theme.theme$ | async) !== 'dark'" name="moon" [size]="16"></lucide-icon>
+    </button>
+  </div>
+</div>

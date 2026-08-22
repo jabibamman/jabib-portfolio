@@ -1,0 +1,72 @@
+<section class="py-12 flex flex-col gap-12">
+  <div class="flex flex-col items-center justify-center gap-2 text-center">
+    <div class="inline-block rounded-lg px-3 py-1 text-sm bg-[var(--foreground)] text-[var(--background)]">
+      {{ 'landing.projects.badge' | translate | async }}
+    </div>
+    <h2 class="text-[clamp(1.875rem,5vw,3rem)] font-bold tracking-[-0.04em] text-[var(--foreground)]">
+      {{ 'landing.projects.title' | translate | async }}
+    </h2>
+    <p class="text-lg leading-relaxed max-w-[600px] text-[var(--muted-fg)]">
+      {{ 'landing.projects.subtitle' | translate | async }}
+    </p>
+  </div>
+
+  <div
+    class="grid gap-3 max-w-[800px] mx-auto w-full"
+    style="grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr))"
+  >
+    <div
+      *ngFor="let project of items$ | async"
+      class="rounded-lg border border-[var(--border)] flex flex-col overflow-hidden transition-shadow duration-300 hover:shadow-lg"
+    >
+      <div
+        class="w-full h-40 flex items-center justify-center bg-[var(--secondary)] text-[var(--muted-fg)] text-sm font-semibold"
+      >
+        {{ project.name }}
+      </div>
+      <div class="flex flex-col px-2 flex-1">
+        <div class="flex items-center gap-2 mt-1">
+          <h3 class="font-semibold tracking-[-0.01em] text-base text-[var(--foreground)]">
+            {{ project.name }}
+          </h3>
+          <span
+            *ngIf="project.inProgress"
+            class="inline-flex items-stretch overflow-hidden rounded-sm font-mono text-[9px] font-semibold uppercase tracking-wide leading-none border border-[var(--border)]"
+          >
+            <span class="px-1.5 py-0.5 bg-[var(--foreground)] text-[var(--background)]">build</span>
+            <span class="flex items-center gap-1 px-1.5 py-0.5 bg-[var(--secondary)] text-[var(--foreground)]">
+              <span class="w-1 h-1 rounded-full bg-current animate-pulse"></span>
+              {{ 'landing.projects.wipLabel' | translate | async }}
+            </span>
+          </span>
+        </div>
+        <time class="text-xs text-[var(--foreground)]">{{ project.date }}</time>
+        <p class="text-xs leading-relaxed mt-1 [text-wrap:pretty] text-[var(--muted-fg)]">
+          {{ project.description }}
+        </p>
+        <div class="mt-2 flex flex-wrap gap-1">
+          <div
+            *ngFor="let tag of project.tags"
+            class="inline-flex items-center rounded-md px-1 font-semibold text-[10px] bg-[var(--secondary)] text-[var(--foreground)]"
+          >
+            {{ tag }}
+          </div>
+        </div>
+        <div class="flex items-center py-2 mt-auto">
+          <a
+            [href]="project.href"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex gap-2 items-center rounded-md px-2 py-1 text-[10px] font-semibold no-underline bg-[var(--foreground)] text-[var(--background)]"
+          >
+            <lucide-icon [name]="project.linkType === 'source' ? 'github' : 'globe'" [size]="12"></lucide-icon>
+            <ng-container *ngIf="project.linkType === 'source'; else websiteLabel">
+              {{ 'landing.projects.sourceLabel' | translate | async }}
+            </ng-container>
+            <ng-template #websiteLabel>{{ 'landing.projects.websiteLabel' | translate | async }}</ng-template>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

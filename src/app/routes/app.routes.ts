@@ -1,18 +1,12 @@
 import { Routes } from '@angular/router';
 import { WipComponent } from '../features/wip/pages/wip.component';
-import { CvComponent } from '../features/cv/pages/cv.component';
 import { LandingComponent } from '../features/landing/pages/landing.component';
 import { LegalNoticeComponent } from '../features/legal/pages/legal-notice/legal-notice.component';
-import { localeRedirectGuard } from '../core/guards/locale-redirect.guard';
 
 const mainRoutes: Routes = [
   {
     path: '',
     component: LandingComponent,
-  },
-  {
-    path: 'cv',
-    component: CvComponent,
   },
   {
     path: 'wip',
@@ -36,11 +30,6 @@ export const appRoutes: Routes = [
   {
     path: '',
     redirectTo: '/fr',
-    pathMatch: 'full',
-  },
-  {
-    path: 'cv',
-    redirectTo: '/fr/cv',
     pathMatch: 'full',
   },
   {

@@ -7,12 +7,6 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://jabib.dev/cv</loc>
-    <lastmod>2025-09-12T08:32:31+00:00</lastmod>
-    <priority>0.90</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
     <loc>https://jabib.dev/projets</loc>
     <lastmod>2025-09-12T08:32:31+00:00</lastmod>
     <priority>0.80</priority>

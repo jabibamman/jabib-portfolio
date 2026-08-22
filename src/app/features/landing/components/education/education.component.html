@@ -1,0 +1,26 @@
+<section>
+  <div class="flex flex-col gap-3">
+    <h2 class="text-xl font-bold text-[var(--foreground)]">
+      {{ 'landing.education.title' | translate | async }}
+    </h2>
+
+    <div *ngFor="let entry of entries$ | async" class="flex py-1">
+      <div class="flex-none">
+        <div class="w-12 h-12 rounded-full overflow-hidden border border-[var(--border)]">
+          <img [src]="logoSrc(entry.logo)" [alt]="entry.org" class="w-full h-full object-cover block" />
+        </div>
+      </div>
+      <div class="flex-1 ml-4 min-w-0">
+        <div class="flex items-center justify-between gap-2">
+          <h3 class="font-semibold leading-none text-sm text-[var(--foreground)]">
+            {{ entry.org }}
+          </h3>
+          <div class="text-sm [font-variant-numeric:tabular-nums] text-[var(--muted-fg)] whitespace-nowrap">
+            {{ entry.dates }}
+          </div>
+        </div>
+        <div class="text-xs mt-1 text-[var(--foreground)]">{{ entry.degree }}</div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -18,7 +18,7 @@ export class NavigationService {
 
   /**
    * Navigate to a route with the current locale prefix
-   * @param path - The path without locale (e.g., '/cv', 'cv', or '')
+   * @param path - The path without locale (e.g., '/wip', 'wip', or '')
    */
   navigateTo(path: string): Promise<boolean> {
     const currentLocale = this.localeRouting.getCurrentLocale();
