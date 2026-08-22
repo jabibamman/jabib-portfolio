@@ -6,26 +6,16 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://jabib.dev/fr/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://jabib.dev/en/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jabib.dev/" />
-    <lastmod>2025-10-06</lastmod>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://jabib.dev/en/portfolio</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://jabib.dev/fr/portfolio" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://jabib.dev/en/portfolio" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jabib.dev/" />
-    <lastmod>2025-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://jabib.dev/en/contact</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://jabib.dev/fr/contact" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://jabib.dev/en/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jabib.dev/" />
-    <lastmod>2025-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://jabib.dev/en/mentions-legales</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jabib.dev/fr/mentions-legales" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://jabib.dev/en/mentions-legales" />
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>

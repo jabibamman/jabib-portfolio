@@ -17,7 +17,7 @@ export function app(): express.Express {
   server.set('views', browserDistFolder);
 
   server.get('/', (req, res) => {
-    res.redirect(302, '/fr/');
+    res.redirect(301, '/fr/');
   });
 
   server.get(
