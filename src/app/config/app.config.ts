@@ -20,6 +20,7 @@ import {
   Moon,
   ChevronRight,
   Globe,
+  Youtube,
 } from 'lucide-angular';
 import { TranslationService } from '../core/services/translation.service';
 
@@ -44,6 +45,7 @@ export const appConfig: ApplicationConfig = {
         Moon,
         ChevronRight,
         Globe,
+        Youtube,
       })
     ),
     TranslationService,

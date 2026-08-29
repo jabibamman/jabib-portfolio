@@ -89,6 +89,7 @@
     "websiteLabel": "Website",
     "sourceLabel": "Source",
     "wipLabel": "In progress",
+    "youtubeLabel": "Demo",
     "items": [
       {
         "name": "Upstra",
@@ -96,7 +97,8 @@
         "description": "B2B SaaS for lab infrastructure management: UPS / iLO / VMware ESXi integration, DDD and hexagonal architecture. NestJS back-end, Vue 3 front-end.",
         "tags": ["NestJS", "Vue 3", "Docker", "PostgreSQL"],
         "href": "https://github.com/Upstra",
-        "linkType": "source"
+        "linkType": "source",
+        "youtubeUrl": "https://youtu.be/9E65qXEqmWo"
       },
       {
         "name": "Vinstro",
@@ -121,7 +123,8 @@
         "description": "High-performance fractal generator in Rust: Julia, Mandelbrot, Newton-Raphson, distributed computation.",
         "tags": ["Rust", "GitHub Actions", "Rustdoc"],
         "href": "https://github.com/jabibamman/frakt",
-        "linkType": "source"
+        "linkType": "source",
+        "youtubeUrl": "https://youtu.be/2avJBCljDdY"
       }
     ]
   },

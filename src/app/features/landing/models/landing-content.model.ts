@@ -24,6 +24,7 @@ export interface ProjectItem {
   href: string;
   linkType: 'website' | 'source';
   inProgress?: boolean;
+  youtubeUrl?: string;
 }
 
 export interface ArticleEntry {

@@ -52,7 +52,7 @@
             {{ tag }}
           </div>
         </div>
-        <div class="flex items-center py-2 mt-auto">
+        <div class="flex items-center gap-2 py-2 mt-auto">
           <a
             [href]="project.href"
             target="_blank"
@@ -64,6 +64,16 @@
               {{ 'landing.projects.sourceLabel' | translate | async }}
             </ng-container>
             <ng-template #websiteLabel>{{ 'landing.projects.websiteLabel' | translate | async }}</ng-template>
+          </a>
+          <a
+            *ngIf="project.youtubeUrl"
+            [href]="project.youtubeUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex gap-2 items-center rounded-md px-2 py-1 text-[10px] font-semibold no-underline border border-[var(--border)] text-[var(--foreground)] hover:bg-[var(--secondary)] transition-colors duration-150"
+          >
+            <lucide-icon name="youtube" [size]="12"></lucide-icon>
+            {{ 'landing.projects.youtubeLabel' | translate | async }}
           </a>
         </div>
       </div>
