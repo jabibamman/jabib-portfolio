@@ -132,17 +132,9 @@
     "badge": "Écriture",
     "title": "Notes de terrain",
     "subtitle": "La majeure partie de mon travail dans la banque est sous NDA, alors j'écris à la place.",
-    "draftLabel": "brouillon",
-    "articles": [
-      {
-        "title": "Découper une chaîne batch Talend pour la réécrire en Spring Batch sans arrêter la production",
-        "excerpt": "Isoler les fonctions métier d'un job legacy, les couvrir de tests, puis basculer sans fenêtre d'indisponibilité."
-      },
-      {
-        "title": "Ce que l'architecture hexagonale change vraiment quand les règles bancaires bougent chaque trimestre",
-        "excerpt": "Le coût réel des ports et adapters, mesuré sur des règles de crédit qui évoluent à chaque release réglementaire."
-      }
-    ]
+    "back": "Retour",
+    "minRead": "min de lecture",
+    "notFound": "Cette note n'existe pas (ou pas encore)."
   },
   "contact": {
     "badge": "Contact",

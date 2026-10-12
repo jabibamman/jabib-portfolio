@@ -427,3 +427,6 @@ CL*UDE.md
 perso/
 
 # End of https://www.toptal.com/developers/gitignore/api/angular,node,macos,windows,linux,openframeworks,visualstudiocode,intellij+all
+# Generated from content/notes by scripts/build-notes.mjs
+src/app/features/notes/data/
+prerender-routes.txt

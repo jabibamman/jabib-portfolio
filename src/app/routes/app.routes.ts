@@ -16,6 +16,13 @@ const mainRoutes: Routes = [
     path: 'mentions-legales',
     component: LegalNoticeComponent,
   },
+  {
+    path: 'notes/:slug',
+    loadComponent: () =>
+      import('../features/notes/pages/note-detail/note-detail.component').then(
+        m => m.NoteDetailComponent
+      ),
+  },
 ];
 
 export const appRoutes: Routes = [

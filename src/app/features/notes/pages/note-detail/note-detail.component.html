@@ -1,0 +1,43 @@
+<div
+  [attr.data-theme]="theme.theme$ | async"
+  class="min-h-screen bg-[var(--background)] text-[var(--foreground)]"
+  style="padding: clamp(3rem, 8vw, 6rem) 1.5rem 8rem"
+>
+  <app-language-switcher />
+
+  <main class="max-w-[42rem] mx-auto flex flex-col gap-8">
+    <a [routerLink]="homeLink" class="text-sm no-underline text-[var(--muted-fg)] hover:text-[var(--foreground)]">
+      ← {{ 'landing.writing.back' | translate | async }}
+    </a>
+
+    <ng-container *ngIf="view$ | async as view; else notFound">
+      <article class="flex flex-col gap-6">
+        <header class="flex flex-col gap-2">
+          <div class="flex items-center gap-2 text-xs text-[var(--muted-fg)]">
+            <time [attr.datetime]="view.note.date">{{ view.displayDate }}</time>
+            <span>·</span>
+            <span>{{ view.note.readingTime }} {{ 'landing.writing.minRead' | translate | async }}</span>
+          </div>
+          <h1 class="m-0 text-[clamp(1.75rem,4.5vw,2.5rem)] font-bold leading-tight tracking-[-0.03em]">
+            {{ view.note.title }}
+          </h1>
+          <p class="m-0 text-lg leading-relaxed text-[var(--muted-fg)]">{{ view.note.summary }}</p>
+          <div *ngIf="view.note.tags.length" class="flex flex-wrap gap-1">
+            <span
+              *ngFor="let tag of view.note.tags"
+              class="inline-flex items-center rounded-md px-1 font-semibold text-[10px] bg-[var(--secondary)] text-[var(--foreground)]"
+            >
+              {{ tag }}
+            </span>
+          </div>
+        </header>
+
+        <div class="note-prose" [innerHTML]="view.html"></div>
+      </article>
+    </ng-container>
+
+    <ng-template #notFound>
+      <p class="text-[var(--muted-fg)]">{{ 'landing.writing.notFound' | translate | async }}</p>
+    </ng-template>
+  </main>
+</div>

@@ -27,3 +27,112 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+
+/* Rendered Markdown of content/notes (see note-detail page) */
+.note-prose {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--foreground);
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  h2 {
+    margin: 2.5rem 0 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  h3 {
+    margin: 2rem 0 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  p,
+  ul,
+  ol,
+  blockquote,
+  pre,
+  table {
+    margin: 0 0 1.25rem;
+  }
+
+  ul,
+  ol {
+    padding-left: 1.5rem;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  li + li {
+    margin-top: 0.35rem;
+  }
+
+  a {
+    color: var(--link);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  blockquote {
+    padding-left: 1rem;
+    border-left: 3px solid var(--border);
+    color: var(--muted-fg);
+  }
+
+  code {
+    padding: 0.1rem 0.35rem;
+    border-radius: 0.25rem;
+    background: var(--secondary);
+    font-size: 0.875em;
+  }
+
+  pre {
+    overflow-x: auto;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+    background: var(--secondary);
+    font-size: 0.875rem;
+    line-height: 1.6;
+
+    code {
+      padding: 0;
+      background: none;
+      font-size: inherit;
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+  }
+
+  th,
+  td {
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+  }
+
+  hr {
+    margin: 2rem 0;
+    border: 0;
+    border-top: 1px solid var(--border);
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 0.5rem;
+  }
+}

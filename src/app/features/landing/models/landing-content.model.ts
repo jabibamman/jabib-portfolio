@@ -26,8 +26,3 @@ export interface ProjectItem {
   inProgress?: boolean;
   youtubeUrl?: string;
 }
-
-export interface ArticleEntry {
-  title: string;
-  excerpt: string;
-}

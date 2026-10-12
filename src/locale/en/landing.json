@@ -132,17 +132,9 @@
     "badge": "Writing",
     "title": "Notes from the field",
     "subtitle": "Most of my banking work is under NDA, so I write about it instead.",
-    "draftLabel": "draft",
-    "articles": [
-      {
-        "title": "Splitting a Talend batch chain to rewrite it in Spring Batch without stopping production",
-        "excerpt": "Isolating the business functions of a legacy job, covering them with tests, then switching over with no downtime window."
-      },
-      {
-        "title": "What hexagonal architecture actually changes when banking rules move every quarter",
-        "excerpt": "The real cost of ports and adapters, measured on credit rules that shift with every regulatory release."
-      }
-    ]
+    "back": "Back",
+    "minRead": "min read",
+    "notFound": "This note does not exist (or not yet)."
   },
   "contact": {
     "badge": "Contact",
