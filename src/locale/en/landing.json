@@ -16,7 +16,7 @@
         "org": "Extia",
         "initial": "E",
         "logo": "extia",
-        "role": "Backend Engineer, Kotlin · on assignment at a Groupe BPCE bank",
+        "role": "Fullstack Developer, Java / Kotlin & Vue.js · on assignment at a Groupe BPCE bank",
         "dates": "Sep 2025 -",
         "details": "-Technical ownership of a credit underwriting platform in production: incident analysis, production support, build & run.\n-Rewrote back-end APIs in Kotlin / Spring Boot 3 for the sales IS overhaul, compliant with group API standards.\n-Contributed to the target architecture: ADRs, hexagonal architecture, clean code.\n-Migrated and integrated existing data flows (Apache Camel, Talend) and maintained the Vue.js front-end on the same scope.\n-Unit and integration tests, peer code reviews, technical documentation and knowledge sharing.",
         "skills": [
@@ -37,7 +37,7 @@
         "org": "Eurialys - Upstra",
         "initial": "E",
         "logo": "eurialys",
-        "role": "Fullstack Engineer · alongside the INSEE apprenticeship",
+        "role": "Fullstack Developer · alongside INSEE",
         "dates": "Mar 2025 - Jul 2025",
         "details": "-Designed a NestJS back-end structured with DDD and hexagonal architecture for a lab infrastructure management SaaS.\n-Built Python microservices orchestrating UPS and iLO equipment.\n-Shipped the Vue 3 front-end and deployment with Docker, Docker Compose and Kubernetes.\n-Led a team of 2 developers: architecture documents, pair programming, code reviews.",
         "skills": ["NestJS", "TypeScript", "Python", "Vue 3", "Docker", "Kubernetes", "DDD"]
@@ -47,7 +47,7 @@
         "org": "INSEE",
         "initial": "I",
         "logo": "insee",
-        "role": "Fullstack Engineer (apprenticeship)",
+        "role": "Fullstack Developer",
         "dates": "Sep 2022 - Aug 2025",
         "details": "-Migrated legacy Talend batch chains to Java 21 / Spring Batch: 12 jobs rewritten, -70% execution time, stronger maintainability, reduced licensing costs.\n-Daily releases and CI/CD supervision: application packaging and deployments through GitLab CI coupled with Jenkins.\n-JUnit unit tests written test-first on the migration, SonarQube analysis, peer code reviews.\n-Ran retrospectives and refinement; application referent for new joiners: onboarding, mentoring, technical support.",
         "skills": [

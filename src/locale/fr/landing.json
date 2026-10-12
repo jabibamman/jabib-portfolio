@@ -16,7 +16,7 @@
         "org": "Extia",
         "initial": "E",
         "logo": "extia",
-        "role": "Backend Engineer, Kotlin · en mission chez une banque du Groupe BPCE",
+        "role": "Développeur fullstack Java / Kotlin & Vue.js · en mission chez une banque du Groupe BPCE",
         "dates": "Sept. 2025 -",
         "details": "-Ownership technique d'une plateforme d'octroi de crédit en production : analyse d'incidents, support de production, build & run.\n-Réécriture des API back-end en Kotlin / Spring Boot 3 pour la refonte du SI commercial, conforme aux standards API du groupe.\n-Contribution à l'architecture cible : ADR, architecture hexagonale, clean code.\n-Migration et intégration des flux de données existants (Apache Camel, Talend) et maintien du front-end Vue.js sur le même périmètre.\n-Tests unitaires et d'intégration, revues de code entre pairs, documentation technique et partage de connaissances.",
         "skills": [
@@ -37,7 +37,7 @@
         "org": "Eurialys - Upstra",
         "initial": "E",
         "logo": "eurialys",
-        "role": "Fullstack Engineer · en parallèle de l'alternance à l'INSEE",
+        "role": "Développeur fullstack · en parallèle de l'INSEE",
         "dates": "Mars 2025 - Juil. 2025",
         "details": "-Conception d'un back-end NestJS structuré en DDD et architecture hexagonale pour un SaaS de gestion d'infrastructure de labo.\n-Développement de microservices Python orchestrant des équipements UPS et iLO.\n-Livraison du front-end Vue 3 et déploiement avec Docker, Docker Compose et Kubernetes.\n-Encadrement d'une équipe de 2 développeurs : documents d'architecture, pair programming, revues de code.",
         "skills": ["NestJS", "TypeScript", "Python", "Vue 3", "Docker", "Kubernetes", "DDD"]
@@ -47,7 +47,7 @@
         "org": "INSEE",
         "initial": "I",
         "logo": "insee",
-        "role": "Fullstack Engineer (alternance)",
+        "role": "Développeur fullstack",
         "dates": "Sept. 2022 - Août 2025",
         "details": "-Migration de chaînes batch Talend legacy vers Java 21 / Spring Batch : 12 jobs réécrits, -70% de temps d'exécution, meilleure maintenabilité, coûts de licence réduits.\n-Mises en production quotidiennes et supervision CI/CD : packaging applicatif et déploiements via GitLab CI couplé à Jenkins.\n-Tests unitaires JUnit écrits test-first sur la migration, analyse SonarQube, revues de code entre pairs.\n-Animation de rétrospectives et de refinements ; référent applicatif pour les nouveaux arrivants : onboarding, mentorat, support technique.",
         "skills": [

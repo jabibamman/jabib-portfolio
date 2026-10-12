@@ -1,6 +1,6 @@
 ---
 title: Un calcul de fractales distribué en Rust, de l'architecture à un bug de protocole
-summary: Un workspace Cargo conseillé par notre prof d'architecture, des panics remplacés par des Result, et un serveur qui lisait mal les messages de ses workers.
+summary: Un workspace Cargo conseillé par notre tuteur, des panics remplacés par des Result, et un serveur qui lisait mal les messages de ses workers.
 date: 2026-10-12
 tags: [rust, cargo, architecture]
 published: true
