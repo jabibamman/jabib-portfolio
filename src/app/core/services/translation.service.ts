@@ -2,7 +2,7 @@ import { Injectable, Inject, LOCALE_ID, PLATFORM_ID } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { isPlatformBrowser } from '@angular/common';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { TranslationLoaderService } from './translation-loader.service';
@@ -22,6 +22,7 @@ export class TranslationService {
     private router: Router,
     @Inject(LOCALE_ID) locale: string,
     @Inject(PLATFORM_ID) private platformId: Object,
+    @Inject(DOCUMENT) private document: Document,
     private translationLoader: TranslationLoaderService
   ) {
     const urlLocale = this.getLocaleFromUrl();
@@ -56,12 +57,14 @@ export class TranslationService {
     }
   }
 
+  // DOCUMENT.location is also set during SSR/prerender, unlike window.
+  // Its pathname can be empty there (href is relative), so parse href instead.
   private getLocaleFromUrl(): string | null {
-    if (isPlatformBrowser(this.platformId)) {
-      const path = window.location.pathname;
-      if (path.startsWith('/fr')) return 'fr';
-      if (path.startsWith('/en')) return 'en';
-    }
+    const href = this.document.location?.href;
+    if (!href) return null;
+    const path = new URL(href, 'http://localhost').pathname;
+    if (path.startsWith('/fr')) return 'fr';
+    if (path.startsWith('/en')) return 'en';
     return null;
   }
 
