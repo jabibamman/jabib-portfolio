@@ -1,28 +1,22 @@
 ---
-title: Ce qu'un calcul de fractales distribué m'a appris sur Rust
-summary: Six crates dans un workspace Cargo, un serveur qui distribue des fragments à des workers, et quelques idées reçues que j'avais sur Rust en commençant.
-date: 2026-12-01
+title: Un calcul de fractales distribué en Rust, de l'architecture à un bug de protocole
+summary: Un workspace Cargo conseillé par notre prof d'architecture, des panics remplacés par des Result, et un serveur qui lisait mal les messages de ses workers.
+date: 2026-10-12
 tags: [rust, cargo, architecture]
-published: false
+published: true
 ---
 
-En première année de mastère à l'ESGI, on a eu un projet en Rust : calculer des fractales de façon distribuée. Un serveur découpe l'image en fragments, des workers se connectent, calculent leur morceau et renvoient le résultat. Je n'avais jamais écrit de Rust.
+En quatrième année à l'ESGI (ma première année de mastère), on a eu un projet en Rust pour le cours d'architecture des logiciels : explorer des fractales avec un réseau de machines. Un serveur découpe l'image en fragments, des workers s'y connectent, calculent leur morceau et renvoient le résultat. Je débutais en Rust.
 
-<!-- TODO : projet seul ou en équipe ? Combien de personnes, combien de temps ? -->
+Nous étions quatre, et les commits s'étalent d'octobre 2023 à mars 2024. Mon rôle était l'architecture : la structure du projet, les bonnes pratiques et le refactoring. Le reste de l'équipe implémentait les fractales. Je ne touchais pas au calcul, seulement à la partie technique, et il n'y a eu aucun désaccord : tout le monde était d'accord, et tout s'est passé proprement.
 
-Le code est [public sur GitHub](https://github.com/jabibamman/frakt).
+Le code est [public sur GitHub](https://github.com/jabibamman/frakt), avec sa [documentation](https://jabibamman.github.io/frakt/client).
 
-## Un workspace plutôt qu'un projet
+## Passer d'un dossier à un workspace
 
-La première bonne décision a été de découper le projet en **workspace Cargo** : plusieurs crates dans un même dépôt, avec un seul `Cargo.lock` et un seul dossier de build.
+Le sujet demandait des crates séparés : le travailleur, le serveur, les éléments communs, et les opérations sur les nombres complexes. Avec une règle : pas de duplication de code entre le travailleur et le serveur. On avait commencé avec un simple dossier. Le 29 octobre 2023, un commit s'intitule « workspace & crate instead of basic folder ». C'est notre tuteur, Pascal Havé, architecte et professeur à l'ESGI, qui nous avait conseillé de le faire pour mieux découper le code.
 
-```toml
-[workspace]
-resolver = "2"
-members = ["client", "shared", "server", "complex", "cli", "gui"]
-```
-
-Chaque crate a un rôle clair :
+On a fini avec six crates, plus que les quatre demandés :
 
 ```
 frakt/
@@ -30,40 +24,28 @@ frakt/
 ├── shared/    # types des messages, erreurs, logger, utilitaires communs
 ├── server/    # découpe l'image et distribue les fragments
 ├── client/    # worker : reçoit un fragment, le calcule, renvoie les pixels
-├── cli/       # parsing des arguments, partagé par le client et le serveur
+├── cli/       # arguments en ligne de commande
 └── gui/       # visualisation
 ```
 
-Ce découpage force une discipline utile : `complex` ne sait rien du réseau, `shared` ne sait rien du calcul. Si le client a besoin de quelque chose du serveur, c'est que ça doit descendre dans `shared`. Le compilateur refuse les dépendances circulaires entre crates, donc l'architecture ne peut pas pourrir en silence.
+Ça a bien servi pour travailler à quatre. Chacun ajoutait sa fractale dans `complex` sans toucher au réseau, et `complex` ne sait rien du réseau. Si le client a besoin de quelque chose du serveur, ça descend dans `shared`.
 
-Les commandes restent simples :
-
-```bash
-cargo build              # tout le workspace
-cargo test               # tous les tests
-cargo run -p server
-cargo run -p client
-```
-
-## Ce que je referais autrement dans le workspace
-
-Chaque crate déclare ses propres versions de dépendances. Le `Cargo.lock` unique évite d'avoir deux versions compatibles de `serde` en parallèle, mais les déclarations sont dupliquées et peuvent dériver. Depuis Rust 1.64, on peut les centraliser :
+Une chose que je referais autrement : chaque crate déclare ses propres dépendances. Dans notre repo, `image` est en 0.24.7 dans `client` et `shared`, mais en 0.24.9 dans `gui`. Depuis Rust 1.64, on peut les centraliser dans le `Cargo.toml` racine :
 
 ```toml
-# Cargo.toml racine
 [workspace.dependencies]
-serde = { version = "1.0", features = ["derive"] }
+image = "0.24.9"
 
-# shared/Cargo.toml
+# client/Cargo.toml
 [dependencies]
-serde = { workspace = true }
+image = { workspace = true }
 ```
 
-Je ne connaissais pas la fonctionnalité à l'époque. C'est la première chose que je changerais.
+## Des Result à la place des panics
 
-## La gestion d'erreurs
+Le 15 novembre 2023, deux commits le même jour : « return result instead of panicking » sur le code d'image, et « refactored without using mut » sur Julia. Le sujet listait ça en bonus : réduire au maximum les `unwrap()`, les `expect()`, les `panic!()` et les `mut`. Nous, on voulait surtout suivre une bonne pratique de gestion des erreurs, pour que tout soit propre.
 
-Le point qui m'a le plus marqué, c'est que Rust rend les erreurs **visibles dans les signatures**. Le `main` du client renvoie un `Result` et propage les erreurs avec `?` :
+Résultat, le `main` du client renvoie un `Result` et propage les erreurs avec `?` :
 
 ```rust
 fn main() -> Result<(), FractalError> {
@@ -79,26 +61,43 @@ fn main() -> Result<(), FractalError> {
 }
 ```
 
-Impossible d'oublier qu'une fonction peut échouer : le type le dit, et ignorer un `Result` déclenche un avertissement. C'est ce qui m'a fait aimer, des années plus tard, `Either` d'Arrow en Kotlin : même idée, l'erreur fait partie du contrat.
+Une fonction qui peut échouer le dit dans sa signature, et ignorer un `Result` déclenche un avertissement. Ça ne veut pas dire que le programme ne peut plus planter : un `unwrap()` reste possible.
 
-Une nuance quand même, parce que je l'ai longtemps mal formulée : Rust ne garantit pas qu'il n'y aura « aucune erreur en prod ». Un `unwrap()` sur une valeur absente ou un indice hors limites provoque un `panic`. Rust garantit que les erreurs **attendues** sont explicites, pas que le programme ne peut pas planter.
+## Le serveur qui ne lisait pas les tailles
 
-## Les idées reçues que j'avais
+Le protocole du sujet fixe le format des messages sur le flux TCP : deux entiers de 4 octets en big-endian, la taille totale puis la taille du JSON, suivis du JSON et des données binaires.
 
-**« Rust empêche les fuites mémoire. »** Faux. Rust garantit la **sûreté mémoire** : pas de use-after-free, pas de data race en code safe. Mais une fuite est considérée comme sûre : un cycle de `Rc`, `std::mem::forget` ou `Box::leak` fuient sans une ligne de code `unsafe`. Le Rust Book y consacre une section.
+Côté serveur, le 26 décembre, je corrige la lecture. Avant, le serveur lisait tout le flux d'un coup avec `read_to_end`, puis cherchait le premier `{` pour retrouver le JSON :
 
-**« Le borrow checker est un obstacle. »** Au début, si. Ensuite, il devient un relecteur qui signale les problèmes de partage de données avant qu'ils existent. Les fragments circulent entre le réseau et le calcul : savoir qui possède quoi à chaque étape n'est pas une contrainte du langage, c'est une vraie question de conception.
+```rust
+let mut reader = BufReader::new(&stream);
+let mut buffer = Vec::new();
+reader.read_to_end(&mut buffer)?;
+// ...
+let json_start = data_str.find('{').unwrap_or(0);
+```
 
-<!-- TODO : une erreur du borrow checker concrète sur laquelle tu as bloqué, et ce qu'elle t'a appris. C'est le paragraphe le plus intéressant à écrire. -->
+Ça ne lit jamais les tailles : la recherche du `{` ne servait qu'à sauter les huit octets d'en-tête. Et `read_to_end` attend que l'autre côté ferme la connexion, ce qui ne colle pas à un flux où un worker envoie un message puis attend la réponse. Après le commit, le serveur lit les deux tailles puis exactement le nombre d'octets annoncé :
 
-**« Les messages d'erreur sont incompréhensibles. »** Ceux du compilateur Rust sont parmi les meilleurs que je connaisse : ils pointent la ligne, expliquent le problème et proposent souvent la correction. Ce qui est dur au début, ce sont les concepts derrière (ownership, lifetimes), pas les messages.
+```rust
+let mut total_size_buffer = [0; 4];
+stream.read_exact(&mut total_size_buffer)?;
+let total_size = u32::from_be_bytes(total_size_buffer) as usize;
 
-## Ce qui a coûté cher
+let mut json_size_buffer = [0; 4];
+stream.read_exact(&mut json_size_buffer)?;
+let json_size = u32::from_be_bytes(json_size_buffer) as usize;
 
-- **La courbe d'apprentissage.** <!-- TODO : estimation honnête du temps passé avant d'être à l'aise. -->
-- **Le temps de compilation**, surtout en build complet. `cargo check` pendant le développement aide beaucoup.
-- **Le protocole réseau** : sérialiser les messages en JSON avec `serde`, gérer la taille des messages et les déconnexions des workers. C'est là que la plupart des bugs se trouvaient, pas dans le calcul.
+let mut buffer = vec![0; total_size];
+stream.read_exact(&mut buffer)?;
+```
 
-## Ce que j'en garde
+TCP est un flux d'octets : il n'a pas de frontières de messages. C'est le protocole qui doit les poser, et c'est exactement ce que font ces deux tailles.
 
-Je n'écris pas de Rust au travail : je fais du Java et du Kotlin. Mais ce projet a changé ma façon d'écrire du code ailleurs : rendre les erreurs explicites dans les types, réfléchir à qui possède une donnée et qui la modifie, et découper un projet en modules dont les dépendances sont vérifiées par l'outillage plutôt que par la bonne volonté.
+## Apprendre Rust
+
+Il m'a fallu plusieurs mois avant d'être à l'aise. Ce qui m'a le plus aidé, c'est [Rustlings](https://github.com/rust-lang/rustlings) : de petits exercices à corriger dans le terminal, qui font pratiquer l'ownership, les emprunts et les `Result` un concept à la fois. Je le recommande à quiconque débute.
+
+Une chose qu'on lit souvent : « Rust empêche les fuites mémoire ». C'est faux. Rust garantit la sûreté mémoire (pas de use-after-free, pas de data race en code safe), mais une fuite reste possible sans une ligne de `unsafe` : un cycle de `Rc`, `std::mem::forget` ou `Box::leak` suffisent. Le Rust Book y consacre une section.
+
+Je n'écris pas de Rust au travail : je fais du Java et du Kotlin.

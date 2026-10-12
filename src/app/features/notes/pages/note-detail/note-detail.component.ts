@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, Inject } from '@angular/core';
+import { CommonModule, DOCUMENT } from '@angular/common';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
 import { Observable, combineLatest } from 'rxjs';
@@ -30,9 +30,10 @@ export class NoteDetailComponent {
   constructor(
     route: ActivatedRoute,
     private translationService: TranslationService,
-    notesService: NotesService,
+    private notesService: NotesService,
     private title: Title,
     private meta: Meta,
+    @Inject(DOCUMENT) private document: Document,
     public theme: ThemeService
   ) {
     this.view$ = combineLatest([route.paramMap, translationService.currentLang$]).pipe(
@@ -60,5 +61,31 @@ export class NoteDetailComponent {
     this.meta.updateTag({ property: 'og:title', content: pageTitle });
     this.meta.updateTag({ property: 'og:description', content: note.summary });
     this.meta.updateTag({ property: 'og:type', content: 'article' });
+    this.updateLinks(note);
+  }
+
+  // index.html hardcodes the home page as canonical and alternate; override it for this note.
+  private updateLinks(note: NoteMeta): void {
+    const base = 'https://jabib.dev';
+    const url = (locale: string) => `${base}/${locale}/notes/${note.slug}`;
+    const head = this.document.head;
+
+    head
+      .querySelectorAll('link[rel="canonical"], link[rel="alternate"][hreflang]')
+      .forEach(el => el.remove());
+
+    const addLink = (rel: string, href: string, hreflang?: string) => {
+      const link = this.document.createElement('link');
+      link.setAttribute('rel', rel);
+      if (hreflang) link.setAttribute('hreflang', hreflang);
+      link.setAttribute('href', href);
+      head.appendChild(link);
+    };
+
+    const locales = this.notesService.locales(note.slug);
+    addLink('canonical', url(note.locale));
+    locales.forEach(locale => addLink('alternate', url(locale), locale));
+    addLink('alternate', url(locales.includes('fr') ? 'fr' : locales[0]), 'x-default');
+    this.meta.updateTag({ property: 'og:url', content: url(note.locale) });
   }
 }

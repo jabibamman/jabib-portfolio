@@ -21,6 +21,10 @@ export class NotesService {
     return [...bySlug.values()].sort((a, b) => b.date.localeCompare(a.date));
   }
 
+  locales(slug: string): string[] {
+    return NOTES.filter(note => note.slug === slug).map(note => note.locale);
+  }
+
   find(slug: string, locale: string): NoteMeta | undefined {
     return this.list(locale).find(note => note.slug === slug);
   }
